@@ -75,18 +75,18 @@ export const Navbar = () => {
 
       {/* Mobile Dropdown */}
       {isMenuOpen && (
-        <div className="w-[90%] bg-white rounded-lg shadow-md absolute top-full left-1/2 transform -translate-x-1/2 z-10 md:hidden">
-          <ul className="flex flex-col font-medium text-left py-3 px-5">
+        <div className="w-[90%] bg-white bg-opacity-80 rounded-lg shadow-md absolute top-full left-1/2 transform -translate-x-1/2 z-10 md:hidden">
+          <ul className="flex flex-col font-medium text-left py-3 px-5 divide-y divide-gray-500">
             <li className="relative group">
               <a
                 href="/stories"
-                className={`block py-4 px-4 rounded-l hover:bg-[#C98292] hover:text-white ${
+                className={`block py-4 px-4 rounded-l hover:text-[#C98292] hover:text- ${
                   currentPath === "/stories" ? "text-[#C98392]" : "text-gray-900"
                 }`}
               >
                 Stories
               </a>
-              <div className="absolute inset-0 bg-transparent rounded-lg group-hover:bg-[#C98292] group-hover:opacity-50"></div>
+              <div className="absolute inset-0 bg-transparent rounded-lg group-hover:opacity-50"></div>
             </li>
             <li className="relative group">
               <a
@@ -102,7 +102,7 @@ export const Navbar = () => {
             <li className="relative group">
               <a
                 href="/joinus"
-                className={`block py-4 px-4 rounded-lg hover:bg-[#C98292] hover:text-white ${
+                className={`block py-4 px-4 rounded-lg hover:text-[#C98292] hover:text-white ${
                   currentPath === "/joinus" ? "text-[#C98392]" : "text-gray-900"
                 }`}
               >
