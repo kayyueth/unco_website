@@ -1,8 +1,10 @@
-import Homepage from "../pages/home"
+import Homepage from "./home/page"
+import { Navbar } from '@/components/layout/navbar'
 
 export default function Home() {
   return (
-    <div className="min-h-[2101px]">
+    <div className="relative min-h-[2101px]">
+      <Navbar/>
       <Homepage />
     </div>
   );
