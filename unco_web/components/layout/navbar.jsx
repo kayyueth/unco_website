@@ -35,7 +35,7 @@ export const Navbar = () => {
               <a
                 href="/lab"
                 className={`py-2 px-4 rounded-lg hover:text-gray-700 ${
-                  currentPath === "/lab" ? "text-[#C98392]" : "text-darkGray"
+                  currentPath === "/lab" ? "text-[#95B3C7]" : "text-darkGray"
                 }`}
               >
                 Lab
@@ -45,7 +45,7 @@ export const Navbar = () => {
               <a
                 href="/joinus"
                 className={`py-2 px-4 rounded-lg hover:text-gray-700 ${
-                  currentPath === "/joinus" ? "text-[#C98392]" : "text-darkGray"
+                  currentPath === "/joinus" ? "text-[#84AF7F]" : "text-darkGray"
                 }`}
               >
                 Join us
