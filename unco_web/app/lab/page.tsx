@@ -3,25 +3,63 @@ export default function Lab() {
   return (
       <div>
         <div className="flex flex-col items-center w-full">
-            <div className="w-[53%] min-h-[250px] text-left text-midGray text-5xl">
-              <h1>RESEARCH SCOPE</h1>
+
+            <div className="mt-44 w-[53%] min-h-[500px] flex items-center text-left text-midGray text-5xl font-by57">
+              <h1>Decentralization<br/>Culture Lab</h1>
             </div>
-            <div className="w-full min-h-[250px] text-left ml-[25%] flex flex-col gap-3">
-              <div className="w-[53%] min-h-[250px] text-left text-midGray text-5xl">
-                <h1>RESEARCH SCOPE</h1>
-                <div>
-                  <p>In 2025, Uncommons will explore opportunities to provide funding for PhD<br/>candidates and early career academics in humanities and social sciences.</p>
-                  <a>Early Apply Here</a>
+            
+            <div className="mt-20 w-full flex flex-row items-start gap-[10%] px-[100px]">
+              <img src="/lab_img.svg" className="" alt="Sculpture"/>
+              <div className="flex flex-wrap gap-10 min-h-[250px] text-left text-midGray text-sm">
+                <div className="w-full md:w-[45%] lg:w-[40%]">
+                  <h1 className="font-bold text-lg mb-2">Summer of Protocols CN</h1>
+                  <p>
+                    Tech Art Project. Supported over 10 artists and writers, focusing on new
+                    media art, crypto art, and anonymous culture research. Initiated by
+                    Ethereum Foundation, co-sponsored by Ethereum Foundation and GCC.
+                  </p>
                 </div>
-                <div>
-                  <h1>Our<br/>Advisor</h1>
-                  <p>Michel Bauwens is the founder of P2P Foundation, a renowned theoretical <br/> scholar in the fields of distributed networks, macro-historical cycles, and <br/>existential risks. During the early development of Bitcoin, Satoshi Nakamoto<br/>engaged in discussions on the P2P Foundation forum and had multiple private<br/>email exchanges with Michel.</p>
+                <div className="w-full md:w-[45%] lg:w-[40%]">
+                  <h1 className="font-bold text-lg mb-2">Raw School</h1>
+                  <p>
+                    Uncommons' crypto study room, focusing on open-style liberal arts
+                    education. Driven by peer-to-peer discussions and mentorship, aiming to
+                    enhance community members' understanding of crypto humanities.
+                  </p>
                 </div>
-                
+                <div className="w-full md:w-[45%] lg:w-[40%]">
+                  <h1 className="font-bold text-lg mb-2">Regenerative crypto-economics</h1>
+                  <p>
+                    Broadcasting regenerative finance and crypto culture in China. In 2023,
+                    our squad translated the GreenPill and ImpactDAO books. Over the next two
+                    years, community members conducted dozens of podcast interviews on
+                    related topics.
+                  </p>
+                </div>
+                <div className="w-full md:w-[45%] lg:w-[40%]">
+                  <h1 className="font-bold text-lg mb-2">Decentralized Science</h1>
+                  <p>
+                    Uncommons' (formerly GreenPill CN community) lecture series,
+                    discussions, and articles on decentralized science. Additionally,
+                    Uncommons has donated $10,000 to the DeSci ecosystem.
+                  </p>
+                </div>
+                <div className="w-full md:w-[45%] lg:w-[30%]">
+                  <h1 className="font-bold text-lg mb-2">More</h1>
+                  <p>
+                    On-chain Governance <br />
+                    Crypto Regulation <br />
+                    Ethereum Translation Team
+                  </p>
+                </div>
               </div>
             </div>
+
             <div className="w-[53%] min-h-[250px] text-left">
-              <h1 className="text-black text-lg">The World Above World: <br/> Entering an Uncommon Layer of Reality</h1>
+              <div>
+                <img/>
+              </div>
+              <p className="">Books published by Uncommons</p>
             </div>
         </div>
     </div>
