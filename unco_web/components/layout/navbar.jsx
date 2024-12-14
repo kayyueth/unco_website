@@ -25,7 +25,7 @@ export const Navbar = () => {
               <a
                 href="/stories"
                 className={`py-2 px-4 rounded-lg hover:text-gray-700 ${
-                  currentPath === "/stories" ? "text-[#C98392]" : "text-gray-900"
+                  currentPath === "/stories" ? "text-[#C98392]" : "text-gray"
                 }`}
               >
                 Stories
