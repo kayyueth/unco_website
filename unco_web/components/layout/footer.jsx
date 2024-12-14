@@ -3,7 +3,7 @@
 export const Footer = () => {
   return (
     <footer className="w-full bg-transparent mt-10">
-      <div className="max-w-screen-xxl mx-auto px-10 py-4">
+      <div className="max-w-screen-xxl mx-auto px-[100px] py-4">
         {/* Desktop View */}
         <hr className="hidden md:block border-gray-300 py-2"/>
         <div className="hidden md:flex items-center justify-around py-2">

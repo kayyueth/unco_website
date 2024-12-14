@@ -1,7 +1,3 @@
-import Homepage from "./home/page"
-import { Navbar } from "../components/layout/navbar"
-import { Footer } from "../components/layout/footer"
-import { Children } from "react";
 
 export default function Home() {
   return (
