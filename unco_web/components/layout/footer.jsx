@@ -11,7 +11,7 @@ export const Footer = () => {
           <ul className="flex justify-around space-x-8 font-medium flex-1">
             <li>
               <a
-                href="#"
+                href="https://uncommons.notion.site/"
                 className="text-black hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -21,7 +21,7 @@ export const Footer = () => {
             </li>
             <li>
               <a
-                href="#"
+                href="https://telegram.me/theuncommons"
                 className="text-black hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -31,7 +31,7 @@ export const Footer = () => {
             </li>
             <li>
               <a
-                href="#"
+                href="https://blog.uncommons.cc"
                 className="text-black hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -41,7 +41,7 @@ export const Footer = () => {
             </li>
             <li>
               <a
-                href="#"
+                href="https://x.com/Un__commons"
                 className="text-black hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -58,7 +58,7 @@ export const Footer = () => {
           <ul className="divide-y divide-gray-300">
             <li className="flex justify-between items-center py-3">
               <a
-                href="#"
+                href="https://uncommons.notion.site"
                 className="text-gray-800 hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -69,7 +69,7 @@ export const Footer = () => {
             </li>
             <li className="flex justify-between items-center py-3">
               <a
-                href="#"
+                href="https://telegram.me/theuncommons"
                 className="text-gray-800 hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -80,7 +80,7 @@ export const Footer = () => {
             </li>
             <li className="flex justify-between items-center py-3">
               <a
-                href="#"
+                href="https://x.com/Un__commons"
                 className="text-gray-800 hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -91,7 +91,7 @@ export const Footer = () => {
             </li>
             <li className="flex justify-between items-center py-3">
               <a
-                href="#"
+                href="https://blog.uncommons.cc"
                 className="text-gray-800 hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
