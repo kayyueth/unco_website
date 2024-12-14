@@ -9,7 +9,7 @@ export default function Stories() {
         </div>
 
         <div className="flex flex-col items-center w-full">
-            <div className="w-[53%] min-h-[200px] text-left">
+            <div className="w-[53%] min-h-[200px] text-left text-gray-900">
               <h1>DECENTRALIZED STORIES</h1>
             </div>
             <div className="w-[34%] min-h-[200px] text-left ml-[30%]">
