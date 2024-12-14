@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: 'Neue';
-  src: url('/fonts/neueSerie57®-Regular.woff') format('woff'); 
+  src: url('/fonts/neueSerie57-Regular.woff2') format('woff2'), url('/fonts/neueSerie57-Regular.woff') format('woff'); 
   font-weight: 400; 
   font-style: normal; 
   font-display: swap; 
@@ -12,8 +12,56 @@
 
 @font-face {
   font-family: 'Neue';
-  src: url('/fonts/neueSerie57®-Book.woff') format('woff');
+  src: url('/fonts/neueSerie57-Book.woff2') format('woff2'),url('/fonts/neueSerie57-Book.woff') format('woff');
   font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SpaceMono';
+  src: url('/fonts/SpaceMono-Regular.woff2') format('woff2'),url('/fonts/SpaceMono-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SpaceMono';
+  src: url('/fonts/SpaceMono-Italic.woff2') format('woff2'),url('/fonts/SpaceMono-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SpaceMono';
+  src: url('/fonts/SpaceMono-BoldItalic.woff2') format('woff2'),url('/fonts/SpaceMono-BoldItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SpaceMono';
+  src: url('/fonts/SpaceMono-Bold.woff2') format('woff2'),url('/fonts/SpaceMono-Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: '5by7';
+  src: url('/fonts/5by7.woff2') format('woff2'),url('/fonts/5by7.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: '5by7';
+  src: url('/fonts/5by7-Bold.woff2') format('woff2'),url('/fonts/5by7-Bold.woff') format('woff');
+  font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
@@ -33,5 +81,5 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: 'Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Neue', 'SpaceMono', '5by7', Arial, Helvetica, sans-serif;
 }
