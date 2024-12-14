@@ -13,9 +13,9 @@ export default {
         foreground: "var(--foreground)",
         black:'#000',
         darkGray:"#333",
-        gray:"#212121",
-        brown:"#413838",
+        midGray:"#212121",
         lightGray:"#a29a9a",
+        brown:"#413838",
       },
       fontFamily: {
         neue: ['Neue', 'sans-serif'],

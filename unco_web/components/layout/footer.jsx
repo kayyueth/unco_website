@@ -7,12 +7,12 @@ export const Footer = () => {
         {/* Desktop View */}
         <hr className="hidden md:block border-gray-300 py-2"/>
         <div className="hidden md:flex items-center justify-around py-2">
-          <p className="text-gray-800 font-medium flex-1">Find Us</p>
+          <p className="text-darkGray font-medium flex-1">Find Us</p>
           <ul className="flex justify-around space-x-8 font-medium flex-1">
             <li>
               <a
                 href="#"
-                className="text-gray-800 hover:underline"
+                className="text-black hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -22,7 +22,7 @@ export const Footer = () => {
             <li>
               <a
                 href="#"
-                className="text-gray-800 hover:underline"
+                className="text-black hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -32,7 +32,7 @@ export const Footer = () => {
             <li>
               <a
                 href="#"
-                className="text-gray-800 hover:underline"
+                className="text-black hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -42,7 +42,7 @@ export const Footer = () => {
             <li>
               <a
                 href="#"
-                className="text-gray-800 hover:underline"
+                className="text-black hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
               >

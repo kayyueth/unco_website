@@ -25,7 +25,7 @@ export const Navbar = () => {
               <a
                 href="/stories"
                 className={`py-2 px-4 rounded-lg hover:text-gray-700 ${
-                  currentPath === "/stories" ? "text-[#C98392]" : "text-gray"
+                  currentPath === "/stories" ? "text-[#C98392]" : "text-darkGray"
                 }`}
               >
                 Stories
@@ -35,7 +35,7 @@ export const Navbar = () => {
               <a
                 href="/lab"
                 className={`py-2 px-4 rounded-lg hover:text-gray-700 ${
-                  currentPath === "/lab" ? "text-[#C98392]" : "text-gray-900"
+                  currentPath === "/lab" ? "text-[#C98392]" : "text-darkGray"
                 }`}
               >
                 Lab
@@ -45,7 +45,7 @@ export const Navbar = () => {
               <a
                 href="/joinus"
                 className={`py-2 px-4 rounded-lg hover:text-gray-700 ${
-                  currentPath === "/joinus" ? "text-[#C98392]" : "text-gray-900"
+                  currentPath === "/joinus" ? "text-[#C98392]" : "text-darkGray"
                 }`}
               >
                 Join us
@@ -58,7 +58,7 @@ export const Navbar = () => {
         <div className="hidden md:flex">
           <a
             href="#"
-            className="py-2 px-4 text-gray-900 hover:text-gray-700"
+            className="py-2 px-4 text-darkGray hover:text-gray-700"
           >
             Connect Wallet
           </a>
@@ -67,7 +67,7 @@ export const Navbar = () => {
         {/* Mobile Menu Button */}
         <button
           onClick={toggleMenu}
-          className="md:hidden text-gray-900 text-base font-medium focus:outline-none"
+          className="md:hidden text-darkGray text-base font-medium focus:outline-none"
         >
           Menu
         </button>
@@ -81,7 +81,7 @@ export const Navbar = () => {
               <a
                 href="/stories"
                 className={`block py-4 px-4 rounded-l hover:text-[#C98292] hover:text- ${
-                  currentPath === "/stories" ? "text-[#C98392]" : "text-gray-900"
+                  currentPath === "/stories" ? "text-[#C98392]" : "text-darkGray"
                 }`}
               >
                 Stories
@@ -92,7 +92,7 @@ export const Navbar = () => {
               <a
                 href="/lab"
                 className={`block py-4 px-4 rounded-lg hover:bg-[#C98292] hover:text-white ${
-                  currentPath === "/lab" ? "text-[#C98392]" : "text-gray-900"
+                  currentPath === "/lab" ? "text-[#C98392]" : "text-darkGray"
                 }`}
               >
                 Lab
@@ -103,7 +103,7 @@ export const Navbar = () => {
               <a
                 href="/joinus"
                 className={`block py-4 px-4 rounded-lg hover:text-[#C98292] hover:text-white ${
-                  currentPath === "/joinus" ? "text-[#C98392]" : "text-gray-900"
+                  currentPath === "/joinus" ? "text-[#C98392]" : "text-darkGray"
                 }`}
               >
                 Join us
@@ -113,7 +113,7 @@ export const Navbar = () => {
             <li className="relative group">
               <a
                 href="#"
-                className="block py-4 px-4 rounded-lg hover:bg-[#C98292] hover:text-white text-gray-900"
+                className="block py-4 px-4 rounded-lg hover:bg-[#C98292] hover:text-white text-darkGray"
               >
                 Connect Wallet
               </a>
