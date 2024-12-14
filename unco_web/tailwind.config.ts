@@ -20,7 +20,7 @@ export default {
       fontFamily: {
         neue: ['Neue', 'sans-serif'],
         spacemono: ['SpaceMono', 'monospace'],
-        by7: ['5by7', 'sans-serif'],
+        by57: ['by57', 'sans-serif'],
       },
     },
   },
