@@ -2,84 +2,89 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Neue */
 @font-face {
   font-family: 'Neue';
-  src: url('/fonts/neueSerie57-Regular.woff2') format('woff2'), url('/fonts/neueSerie57-Regular.woff') format('woff'); 
-  font-weight: normal; 
-  font-style: normal; 
-  font-display: swap; 
+  src: url('/fonts/neueSerie57-Regular.woff2') format('woff2'),
+       url('/fonts/neueSerie57-Regular.woff') format('woff');
+  font-weight: 400; 
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Neue';
-  src: url('/fonts/neueSerie57-Book.woff2') format('woff2'),url('/fonts/neueSerie57-Book.woff') format('woff');
-  font-weight: normal;
+  src: url('/fonts/neueSerie57-Book.woff2') format('woff2'),
+       url('/fonts/neueSerie57-Book.woff') format('woff');
+  font-weight: 300; /* 使用标准权重 300 */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* SpaceMono */
+@font-face {
+  font-family: 'SpaceMono';
+  src: url('/fonts/SpaceMono-Regular.woff2') format('woff2'),
+       url('/fonts/SpaceMono-Regular.woff') format('woff');
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'SpaceMono';
-  src: url('/fonts/SpaceMono-Regular.woff2') format('woff2'),url('/fonts/SpaceMono-Regular.woff') format('woff');
-  font-weight: normal;
+  src: url('/fonts/SpaceMono-Italic.woff2') format('woff2'),
+       url('/fonts/SpaceMono-Italic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic; 
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SpaceMono';
+  src: url('/fonts/SpaceMono-Bold.woff2') format('woff2'),
+       url('/fonts/SpaceMono-Bold.woff') format('woff');
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'SpaceMono';
-  src: url('/fonts/SpaceMono-Italic.woff2') format('woff2'),url('/fonts/SpaceMono-Italic.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+  src: url('/fonts/SpaceMono-BoldItalic.woff2') format('woff2'),
+       url('/fonts/SpaceMono-BoldItalic.woff') format('woff');
+  font-weight: 700;
+  font-style: italic; 
   font-display: swap;
 }
 
+/* 5by7 */
 @font-face {
-  font-family: 'SpaceMono';
-  src: url('/fonts/SpaceMono-BoldItalic.woff2') format('woff2'),url('/fonts/SpaceMono-BoldItalic.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'SpaceMono';
-  src: url('/fonts/SpaceMono-Bold.woff2') format('woff2'),url('/fonts/SpaceMono-Bold.woff') format('woff');
-  font-weight: normal;
+  font-family: '5by7';
+  src: url('/fonts/5by7.woff2') format('woff2'),
+       url('/fonts/5by7.woff') format('woff');
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: '5by7';
-  src: url('/fonts/5by7.woff2') format('woff2'),url('/fonts/5by7.woff') format('woff');
-  font-weight: normal;
+  src: url('/fonts/5by7-Bold.woff2') format('woff2'),
+       url('/fonts/5by7-Bold.woff') format('woff');
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
-@font-face {
-  font-family: '5by7';
-  src: url('/fonts/5by7-Bold.woff2') format('woff2'),url('/fonts/5by7-Bold.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
+/* global */
 :root {
   --background: none;
   --foreground: #171717;
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
-
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: 'Neue', 'SpaceMono', '5by7', Arial, Helvetica, sans-serif;
+  font-family: 'Neue', 'SpaceMono', '5by7', sans-serif; 
 }

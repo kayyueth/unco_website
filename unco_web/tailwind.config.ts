@@ -13,8 +13,10 @@ export default {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        sans: ['Neue', 'SpaceMono', '5by7', 'Arial', 'Helvetica', 'sans-serif'],
-      }
+        neue: ['Neue', 'sans-serif'],
+        spacemono: ['SpaceMono', 'monospace'],
+        by7: ['5by7', 'sans-serif'],
+      },
     },
   },
   plugins: [
