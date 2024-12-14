@@ -12,7 +12,11 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        sans: ['Neue', 'Arial', 'Helvetica', 'sans-serif'],
+      }
     },
   },
-  plugins: [],
+  plugins: [
+  ],
 } satisfies Config;
