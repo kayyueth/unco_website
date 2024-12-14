@@ -4,14 +4,21 @@ export default function Lab() {
       <div>
         <div className="flex flex-col items-center w-full">
 
-            <div className="mt-44 w-[53%] min-h-[500px] flex items-center text-left text-midGray text-5xl font-by57">
+            <div className="mt-44 md:w-[53%] min-h-[500px] flex items-center text-left text-midGray text-5xl font-by57">
               <h1>Decentralization<br/>Culture Lab</h1>
             </div>
             
-            <div className="mt-20 w-full flex flex-row items-start gap-[10%] px-[100px]">
-              <img src="/lab_img.svg" className="" alt="Sculpture"/>
-              <div className="flex flex-wrap gap-10 min-h-[250px] text-left text-midGray text-sm">
-                <div className="w-full md:w-[45%] lg:w-[40%]">
+            <div className="mt-20 w-full flex flex-col px-20 items-center md:flex-row md:items-start gap-10 md:gap-[10%] px-6 md:px-[100px]">
+              {/* Image Section */}
+              <img
+                src="/lab_img.svg"
+                className="w-full max-w-[310px] md:max-w-[60%] object-contain"
+                alt="Sculpture"
+              />
+
+              {/* Content Section */}
+              <div className="flex flex-wrap gap-12 text-left text-midGray text-sm">
+                <div className="w-full md:min-w-60 lg:max-w-[40%]">
                   <h1 className="font-bold text-lg mb-2">Summer of Protocols CN</h1>
                   <p>
                     Tech Art Project. Supported over 10 artists and writers, focusing on new
@@ -19,7 +26,7 @@ export default function Lab() {
                     Ethereum Foundation, co-sponsored by Ethereum Foundation and GCC.
                   </p>
                 </div>
-                <div className="w-full md:w-[45%] lg:w-[40%]">
+                <div className="w-full md:min-w-60 lg:max-w-[40%]">
                   <h1 className="font-bold text-lg mb-2">Raw School</h1>
                   <p>
                     Uncommons' crypto study room, focusing on open-style liberal arts
@@ -27,7 +34,7 @@ export default function Lab() {
                     enhance community members' understanding of crypto humanities.
                   </p>
                 </div>
-                <div className="w-full md:w-[45%] lg:w-[40%]">
+                <div className="w-full md:min-w-60 lg:max-w-[40%]">
                   <h1 className="font-bold text-lg mb-2">Regenerative crypto-economics</h1>
                   <p>
                     Broadcasting regenerative finance and crypto culture in China. In 2023,
@@ -36,7 +43,7 @@ export default function Lab() {
                     related topics.
                   </p>
                 </div>
-                <div className="w-full md:w-[45%] lg:w-[40%]">
+                <div className="w-full md:min-w-60 lg:max-w-[40%]">
                   <h1 className="font-bold text-lg mb-2">Decentralized Science</h1>
                   <p>
                     Uncommons' (formerly GreenPill CN community) lecture series,
@@ -44,7 +51,7 @@ export default function Lab() {
                     Uncommons has donated $10,000 to the DeSci ecosystem.
                   </p>
                 </div>
-                <div className="w-full md:w-[45%] lg:w-[30%]">
+                <div className="w-full md:min-w-60 lg:max-w-[40%]">
                   <h1 className="font-bold text-lg mb-2">More</h1>
                   <p>
                     On-chain Governance <br />
@@ -54,6 +61,7 @@ export default function Lab() {
                 </div>
               </div>
             </div>
+
 
             <div className="w-[53%] min-h-[250px] text-left">
               <div>
