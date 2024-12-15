@@ -2,13 +2,13 @@
 
 export const Footer = () => {
   return (
-    <footer className="w-full bg-transparent mt-10">
-      <div className="max-w-screen-xxl mx-auto px-[100px] py-4">
+    <footer className="w-3/5 bg-transparent mt-10 flex items-center mx-auto">
+      <div className="w-full">
         {/* Desktop View */}
         <hr className="hidden md:block border-gray-300 py-2"/>
-        <div className="hidden md:flex items-center justify-around py-2">
-          <p className="text-darkGray font-medium flex-1">Find Us</p>
-          <ul className="flex justify-around space-x-8 font-medium flex-1">
+        <div className="hidden md:flex items-center justify-between mb-24">
+          <img src='/logo_icon.svg'/>
+          <ul className="flex justify-around space-x-8 font-medium">
             <li>
               <a
                 href="https://uncommons.notion.site/"
@@ -51,6 +51,7 @@ export const Footer = () => {
             </li>
           </ul>
         </div>
+        <p className="text-gray-400 flex mb-20">@Uncommons 2024</p>
 
         {/* Mobile View */}
         <div className="md:hidden">
