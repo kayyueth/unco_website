@@ -18,14 +18,15 @@ export default function Stories() {
               <h1 className="text-brown text-lg">What's happening in the decentralized <br/> mini-societies in the global world?</h1>
               <p className="text-lightGray text-sm">Click to view the stories <br/> from Uncommons community members.</p>
             </div>
+            <div className="w-full mt-6 mb-44">
+              <Map />
+            </div>
             {/* <div><Map/></div> */}
             <div className="w-[53%] min-h-[250px] text-left">
               <h1 className="text-black text-lg">The World Above World: <br/> Entering an Uncommon Layer of Reality</h1>
             </div>
         </div>
-        <div className="w-full mt-6">
-          <Map />
-        </div>
+
     </div>
   );
 }

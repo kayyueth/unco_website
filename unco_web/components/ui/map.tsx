@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef } from "react";
 import mapboxgl from 'mapbox-gl';
+import { cities } from '@/components/ui/cities';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
 // Mapbox Access Token
@@ -9,24 +10,6 @@ mapboxgl.accessToken = 'pk.eyJ1Ijoid2F0ZXJsaWx5LWx5Y2hpLXpob3UiLCJhIjoiY200cGpqM
 export default function Map() {
   const mapContainer = useRef(null);
   const map = useRef(null);
-
-  const cities = [
-    {
-      name: "San Francisco",
-      coords: [-122.4194, 37.7749],
-      description: "Interview with Vienna Rae",
-    },
-    {
-      name: "Taipei",
-      coords: [121.5654, 25.033],
-      description: "Film Screening: Vitalik",
-    },
-    {
-      name: "Forest City",
-      coords: [103.7035, 1.5841],
-      description: "Story from Gentle Crypto",
-    },
-  ];
   
   useEffect(() => {
     console.log("Initializing Map...");
@@ -34,13 +17,13 @@ export default function Map() {
       console.error("Map container is not available!");
       return;
     }
-    
+
     // Initialize the Mapbox map
     map.current = new mapboxgl.Map({
       container: mapContainer.current,
-      style: "mapbox://styles/mapbox/light-v10",
-      center: [0, 20],
-      zoom: 1.5,
+      style: "mapbox://styles/waterlily-lychi-zhou/cm4ps1mnz008h01r0cp4g1nku",
+      center: [70, 35.8617],
+      zoom: 2,
     });
   
     // Add navigation controls
@@ -48,17 +31,38 @@ export default function Map() {
   
     // Add markers and popup content
     cities.forEach((city) => {
-      const popup = new mapboxgl.Popup({ offset: 25 }).setHTML(
-        `<div class="p-2 bg-white shadow-md rounded-lg">
-           <h3 class="font-bold text-gray-700">${city.name}</h3>
-           <p class="text-gray-600">${city.description}</p>
-         </div>`
-      );
+    // Create a container div for the label
+    const markerContainer = document.createElement("div");
+    markerContainer.className = "city-container";
+
+    // Add city name text inside the container
+    markerContainer.innerHTML = `
+      <div class="city-label border border-gray bg-white p-1 font-spacemono">${city.name}</div>
+    `;
+
+    // Add popup
+    const popup = new mapboxgl.Popup({ offset: 0 }).setHTML(
+      `<div class="p-2 bg-white shadow-md rounded-lg">
+         <h3 class="font-bold text-gray-700">${city.name}</h3>
+         <p class="text-gray-600">${city.description}</p>
+       </div>`
+    );
+
+    // Add the marker to the map
+    new mapboxgl.Marker({
+      element: markerContainer,
+      anchor: "center", // Center the container on the coordinates
+    })
+      .setLngLat(city.coords)
+      .setPopup(popup) 
+      .addTo(map.current);
+
+
   
-      new mapboxgl.Marker({ color: "#C98292" }) // Custom marker color
+/*       new mapboxgl.Marker({ color: "#C98292" }) // Custom marker color
         .setLngLat(city.coords)
         .setPopup(popup) // Show popup on click
-        .addTo(map.current);
+        .addTo(map.current); */
     });
   
     return () => map.current.remove();

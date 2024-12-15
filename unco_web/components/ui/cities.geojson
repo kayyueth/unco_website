@@ -1,0 +1,170 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "HEALDSBURG",
+        "description": "Placeholder description for Healdsburg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.8701, 38.6082]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "BOSTON",
+        "description": "Placeholder description for Boston"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.0589, 42.3601]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "ARGENTINA",
+        "description": "Placeholder description for Argentina"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-63.6167, -38.4161]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "LIMANS",
+        "description": "Placeholder description for Limans"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.5036, 44.0351]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "PARIS",
+        "description": "Placeholder description for Paris"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.3522, 48.8566]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "BRUSSEL",
+        "description": "Placeholder description for Brussel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.3517, 50.8503]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "VIENNA",
+        "description": "Placeholder description for Vienna"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [16.3738, 48.2082]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "LUSTICA BAY MARINA (Montenegro)",
+        "description": "Placeholder description for Lustica Bay Marina"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.7039, 42.3938]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "ISTANBUL",
+        "description": "Placeholder description for Istanbul"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.9784, 41.0082]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "BANGKOK",
+        "description": "Placeholder description for Bangkok"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [100.5018, 13.7563]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "CHIANGMAI",
+        "description": "Placeholder description for Chiangmai"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [98.9817, 18.7883]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "SINGAPORE",
+        "description": "Placeholder description for Singapore"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.8198, 1.3521]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "MALAYSIA",
+        "description": "Placeholder description for Malaysia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [101.9758, 4.2105]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "TAIPEI",
+        "description": "Placeholder description for Taipei"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.5654, 25.033]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "TOKYO",
+        "description": "Placeholder description for Tokyo"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [139.6917, 35.6895]
+      }
+    }
+  ]
+}
