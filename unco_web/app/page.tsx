@@ -52,12 +52,12 @@ export default function Home() {
       {/* Content Section with Full White Background */}
       <div className="relative z-10 bg-white">
  
-        <div className="text-center">
+        <div className="text-left px-10 md:text-center">
           <h1 className="text-4xl font-by57">Uncommons</h1>
           <h3 className="text-xl font-by57">IS A RESEARCHER GARDEN</h3>
           <p className="mt-8 font-spacemono">FOR DECENTRALIZED THOUGHT</p>
           <p className="font-spacemono">AND TECHNO-SOCIAL PHILOSOPHIES</p>
-          <div className='flex items-center justify-center mt-[60px] space-x-2'>
+          <div className='flex items-center md:justify-center mt-[60px] space-x-2'>
             <a
               href="https://uncommons.notion.site/"
               className="flex justify-center underline"
@@ -68,36 +68,85 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Content Grid */}
-        <div className="flex flex-row py-44 w-3/5 mx-auto justify-center items-center items-stretch">
-          <div className="w-[33%] p-4 flex flex-col">
-            <a href="https://uncommons.notion.site/Onboarding-Guide-1512d6bf93b8800aa876fde907caa7ba?pvs=4">
-              <div className="flex justify-center mb-9">
-                <img src="/home_pic1.svg" className="w-[116px] h-[99px]" />
-              </div>
-              <h3 className='text-center mb-3 text-lg'>Getting Started</h3>
+        <div className="grid gap-8 md:grid-cols-3 py-24 px-5 w-full md:w-3/5 mx-auto">
+        
+        {/* Getting Started */}
+        <div className="flex flex-row gap-4 md:flex-col items-center">
+          <a
+            href="https://uncommons.notion.site/Onboarding-Guide-1512d6bf93b8800aa876fde907caa7ba?pvs=4"
+            className="flex-shrink-0"
+          >
+            <img
+              src="/home_pic1.svg"
+              alt="Getting Started"
+              className="w-[90px] h-auto md:w-[80px] md:h-[80px] object-contain"
+            />
+          </a>
+          <div className="flex flex-col text-start md:text-center">
+            <a
+              href="https://uncommons.notion.site/Onboarding-Guide-1512d6bf93b8800aa876fde907caa7ba?pvs=4"
+              className="hover:underline"
+            >
+              <h3 className="text-lg font-semibold mb-2">Getting Started</h3>
             </a>
-            <p>Follow Alice down the rabbit hole into our digital garden with our onboarding guide.</p>
-          </div>
-          <div className="w-[33%] p-4 flex flex-col">
-            <a href="https://blog.uncommons.cc/">
-              <div className="flex justify-center mb-9">
-                <img src="/home_pic2.svg" className="w-[116px] h-[99px]" />
-              </div>
-              <h3 className='text-center mb-3 text-lg'>Newsletter</h3>
-            </a>
-            <p>Digital digest curated by our community. Subscribe to Uncommons' newsletter to read original stories, or contribute your own.</p>
-          </div>
-          <div className="w-[33%] p-4 flex flex-col">
-            <a href="https://calendar.google.com/calendar/embed?src=bdd312e1a2003f5bbac8fdf3748450c9ea093a58a2cd35f186d958c87df3c25e%40group.calendar.google.com&ctz=Asia%2FSingapore">
-              <div className="flex justify-center mb-9">
-                <img src="/home_pic3.svg" className="w-[116px] h-[99px]" />
-              </div>
-              <h3 className='text-center mb-3 text-lg'>Town Hall</h3>
-            </a>
-            <p>Meet up in cyberspace and say hi! Join our Community Call every Friday. See you there!</p>
+            <p className="text-sm leading-relaxed text-gray-600">
+              Follow Alice down the rabbit hole into our digital garden with our onboarding guide.
+            </p>
           </div>
         </div>
+
+        {/* Newsletter */}
+        <div className="flex flex-row gap-4 items-center md:flex-col items-start">
+          <a
+            href="https://blog.uncommons.cc/"
+            className="flex-shrink-0"
+          >
+            <img
+              src="/home_pic2.svg"
+              alt="Newsletter"
+              className="w-[90px] h-auto md:w-[80px] md:h-[80px] object-contain"
+            />
+          </a>
+          <div className="flex flex-col text-start md:text-center">
+            <a
+              href="https://blog.uncommons.cc/"
+              className="hover:underline"
+            >
+              <h3 className="text-lg font-semibold mb-2">Newsletter</h3>
+            </a>
+            <p className="text-sm leading-relaxed text-gray-600">
+              Digital digest curated by our community. Subscribe to Uncommons' newsletter to read
+              original stories, or contribute your own.
+            </p>
+          </div>
+        </div>
+
+        {/* Town Hall */}
+        <div className="flex flex-row gap-4 md:flex-col items-center">
+          <a
+            href="https://calendar.google.com/calendar/embed?src=bdd312e1a2003f5bbac8fdf3748450c9ea093a58a2cd35f186d958c87df3c25e%40group.calendar.google.com&ctz=Asia%2FSingapore"
+            className="flex-shrink-0"
+          >
+            <img
+              src="/home_pic3.svg"
+              alt="Town Hall"
+              className="w-[90px] h-auto md:w-[80px] md:h-[80px] object-contain"
+            />
+          </a>
+          <div className="flex flex-col text-start md:text-center">
+            <a
+              href="https://calendar.google.com/calendar/embed?src=bdd312e1a2003f5bbac8fdf3748450c9ea093a58a2cd35f186d958c87df3c25e%40group.calendar.google.com&ctz=Asia%2FSingapore"
+              className="hover:underline"
+            >
+              <h3 className="text-lg font-semibold mb-2">Town Hall</h3>
+            </a>
+            <p className="text-sm leading-relaxed text-gray-600">
+              Meet up in cyberspace and say hi! Join our Community Call every Friday. See you there!
+            </p>
+          </div>
+        </div>
+      </div>
+
       </div>
     </div>
   );
