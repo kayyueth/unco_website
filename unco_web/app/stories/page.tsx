@@ -1,7 +1,9 @@
 import Map from '@/components/ui/map' 
-import Stats from '@/components/ui/stats' 
+import Stats from '@/components/ui/stats';
+
 
 export default function Stories() {
+  
   return (
       <div>
         <div className="relative mb-36">
