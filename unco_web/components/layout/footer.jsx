@@ -2,16 +2,16 @@
 
 export const Footer = () => {
   return (
-    <footer className="w-3/5 bg-transparent mt-10 flex items-center mx-auto">
-      <div className="w-full">
+    <footer className="w-full bg-transparent mt-10">
+      <div className="max-w-screen-xxl mx-auto px-[100px] py-4">
         {/* Desktop View */}
         <hr className="hidden md:block border-gray-300 py-2"/>
-        <div className="hidden md:flex items-center justify-between mb-24">
-          <img src='/logo_icon.svg'/>
-          <ul className="flex justify-around space-x-8 font-medium">
+        <div className="hidden md:flex items-center justify-around py-2">
+          <p className="text-gray-800 font-medium flex-1">Find Us</p>
+          <ul className="flex justify-around space-x-8 font-medium flex-1">
             <li>
               <a
-                href="https://uncommons.notion.site/"
+                href="#"
                 className="text-black hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -21,7 +21,7 @@ export const Footer = () => {
             </li>
             <li>
               <a
-                href="https://telegram.me/theuncommons"
+                href="#"
                 className="text-black hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -31,7 +31,7 @@ export const Footer = () => {
             </li>
             <li>
               <a
-                href="https://blog.uncommons.cc"
+                href="#"
                 className="text-black hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -41,7 +41,7 @@ export const Footer = () => {
             </li>
             <li>
               <a
-                href="https://x.com/Un__commons"
+                href="#"
                 className="text-black hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -51,7 +51,6 @@ export const Footer = () => {
             </li>
           </ul>
         </div>
-        <p className="text-gray-400 flex mb-20">@Uncommons 2024</p>
 
         {/* Mobile View */}
         <div className="md:hidden">
@@ -59,7 +58,7 @@ export const Footer = () => {
           <ul className="divide-y divide-gray-300">
             <li className="flex justify-between items-center py-3">
               <a
-                href="https://uncommons.notion.site"
+                href="#"
                 className="text-gray-800 hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -70,7 +69,7 @@ export const Footer = () => {
             </li>
             <li className="flex justify-between items-center py-3">
               <a
-                href="https://telegram.me/theuncommons"
+                href="#"
                 className="text-gray-800 hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -81,7 +80,7 @@ export const Footer = () => {
             </li>
             <li className="flex justify-between items-center py-3">
               <a
-                href="https://x.com/Un__commons"
+                href="#"
                 className="text-gray-800 hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -92,7 +91,7 @@ export const Footer = () => {
             </li>
             <li className="flex justify-between items-center py-3">
               <a
-                href="https://blog.uncommons.cc"
+                href="#"
                 className="text-gray-800 hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
