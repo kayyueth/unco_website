@@ -2,7 +2,7 @@
 export default function Lab() {
   return (
       <div>
-        <div className="flex flex-col items-center w-full">
+        <div className="flex flex-col items-center w-4/5 mx-auto">
 
             <div className="mt-44 md:w-[53%] min-h-[500px] flex items-center text-left text-midGray text-5xl font-by57">
               <h1>Decentralization<br/>Culture Lab</h1>
@@ -19,7 +19,7 @@ export default function Lab() {
               {/* Content Section */}
               <div className="flex flex-wrap gap-12 text-left text-midGray text-sm">
                 <div className="w-full lg:max-w-[45%]">
-                  <h1 className="font-bold text-lg mb-2 text-brown">Summer of Protocols CN</h1>
+                  <h1 className="font-semibold text-lg mb-2 text-brown">Summer of Protocols CN</h1>
                   <p className="text-black">
                     Tech Art Project. Supported over 10 artists and writers, focusing on new
                     media art, crypto art, and anonymous culture research. Initiated by
@@ -27,7 +27,7 @@ export default function Lab() {
                   </p>
                 </div>
                 <div className="w-full lg:max-w-[45%]">
-                  <h1 className="font-bold text-lg mb-2 text-brown">Raw School</h1>
+                  <h1 className="font-semibold text-lg mb-2 text-brown">Raw School</h1>
                   <p className="text-black">
                     Uncommons' crypto study room, focusing on open-style liberal arts
                     education. Driven by peer-to-peer discussions and mentorship, aiming to
@@ -35,7 +35,7 @@ export default function Lab() {
                   </p>
                 </div>
                 <div className="w-full lg:max-w-[45%]">
-                  <h1 className="font-bold text-lg mb-2 text-brown">Regenerative crypto-economics</h1>
+                  <h1 className="font-semibold text-lg mb-2 text-brown">Regenerative crypto-economics</h1>
                   <p className="text-black">
                     Broadcasting regenerative finance and crypto culture in China. In 2023,
                     our squad translated the GreenPill and ImpactDAO books. Over the next two
@@ -44,7 +44,7 @@ export default function Lab() {
                   </p>
                 </div>
                 <div className="w-full  lg:max-w-[45%]">
-                  <h1 className="font-bold text-lg mb-2 text-brown">Decentralized Science</h1>
+                  <h1 className="font-semibold text-lg mb-2 text-brown">Decentralized Science</h1>
                   <p className="text-black">
                     Uncommons' (formerly GreenPill CN community) lecture series,
                     discussions, and articles on decentralized science. Additionally,
@@ -52,7 +52,7 @@ export default function Lab() {
                   </p>
                 </div>
                 <div className="w-full lg:max-w-[45%]">
-                  <h1 className="font-bold text-lg mb-2 text-brown">More</h1>
+                  <h1 className="font-semibold text-lg mb-2 text-brown">More</h1>
                   <p className="text-black">
                     On-chain Governance <br />
                     Crypto Regulation <br />
