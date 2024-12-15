@@ -1,6 +1,6 @@
 import Map from '@/components/ui/map' 
 import Stats from '@/components/ui/stats';
-
+import FallingBlocks from '@/components/ui/stats2'
 
 export default function Stories() {
   
@@ -30,7 +30,8 @@ export default function Stories() {
             </div>
         </div>
         <div className='flex justify-center'>
-          <Stats />
+          {/* <Stats /> */}
+          <FallingBlocks />
         </div>
 
     </div>
