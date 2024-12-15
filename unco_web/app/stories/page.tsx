@@ -18,9 +18,10 @@ export default function Stories() {
   }, []);
 
   return (
-    <div className="relative h-full">
+    <div className="relative w-screen h-full">
       {/* Fixed Background Section */}
       <div className="fixed top-0 left-0 w-full h-full z-0">
+        
         <div
           className="relative w-full h-full"
           style={{ opacity: scrollOpacity }}
@@ -39,17 +40,19 @@ export default function Stories() {
       </div>
 
       {/* Spacer to occupy space for the fixed section */}
-      <div className="h-screen"></div>
+      <div className="relative h-screen">
+        <h1 className='absolute top-1/2 left-1/3 transform -translate-y-1/2 -translate-x-1/2 text-left text-midGray text-5xl font-by57 z-10'>DECENTRALIZED <br/>STORIES</h1>
+      </div>
 
       {/* Gradient Overlay */}
-      <div className="relative z-10 inset-x-0 h-32 bg-gradient-to-t from-white via-white/70 to-transparent"></div>
+      <div className="w-full relative z-10 h-32 bg-gradient-to-t from-white via-white/70 to-transparent"></div>
         
       {/* Content Section */}
       <div className="relative z-20 bg-white pt-44">
         <div className="flex flex-col items-center w-full">
-          <div className="w-[53%] min-h-[250px] text-left text-midGray text-5xl font-by57">
-            <h1>DECENTRALIZED <br/>STORIES</h1>
-          </div>
+{/*           <div className="w-[53%] min-h-[250px] text-left text-midGray text-5xl font-by57">
+            
+          </div> */}
           <div className="w-[34%] min-h-[250px] text-left ml-[25%] flex flex-col gap-3">
             
             <h1 className="text-brown text-lg">What's happening in the decentralized <br/> mini-societies in the global world?</h1>
