@@ -1,4 +1,5 @@
 import Map from '@/components/ui/map' 
+import Stats from '@/components/ui/stats' 
 
 export default function Stories() {
   return (
@@ -25,6 +26,9 @@ export default function Stories() {
             <div className="w-[53%] min-h-[250px] text-left">
               <h1 className="text-black text-lg">The World Above World: <br/> Entering an Uncommon Layer of Reality</h1>
             </div>
+        </div>
+        <div className='flex justify-center'>
+          <Stats />
         </div>
 
     </div>
