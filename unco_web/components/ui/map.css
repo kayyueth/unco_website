@@ -1,0 +1,9 @@
+.custom-popup {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: "Space Mono", monospace;
+  padding: 8px 12px;
+  pointer-events: none; /* Ensure clicks pass through to the map */
+}
