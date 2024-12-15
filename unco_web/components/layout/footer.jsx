@@ -2,102 +2,103 @@
 
 export const Footer = () => {
   return (
-    <footer className="w-full bg-transparent mt-10">
-      <div className="max-w-screen-xxl mx-auto px-[100px] py-4">
+    <footer className="w-full bg-white relative z-20 flex items-center justify-center mx-auto ">
+      <div className="w-3/5 mt-10 ">
         {/* Desktop View */}
         <hr className="hidden md:block border-gray-300 py-2"/>
-        <div className="hidden md:flex items-center justify-around py-2">
-          <p className="text-gray-800 font-medium flex-1">Find Us</p>
-          <ul className="flex justify-around space-x-8 font-medium flex-1">
+        <div className="hidden md:flex items-center justify-between mb-24">
+          < img src='/logo_icon.svg'/>
+          <ul className="flex justify-around space-x-8 font-medium">
             <li>
               <a
-                href="#"
+                href=" "
                 className="text-black hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Notion
-              </a>
+              </a >
             </li>
             <li>
               <a
-                href="#"
+                href="https://telegram.me/theuncommons"
                 className="text-black hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Telegram
-              </a>
+              </a >
             </li>
             <li>
               <a
-                href="#"
+                href="https://blog.uncommons.cc"
                 className="text-black hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Blog
-              </a>
+              </a >
             </li>
             <li>
               <a
-                href="#"
+                href="https://x.com/Un__commons"
                 className="text-black hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 X
-              </a>
+              </a >
             </li>
           </ul>
         </div>
+        <p className="text-gray-400 flex mb-20">@Uncommons 2024</p >
 
         {/* Mobile View */}
         <div className="md:hidden">
-          <p className="text-gray-800 font-medium border-b border-gray-300 py-3">Find Us</p>
+          <p className="text-gray-800 font-medium border-b border-gray-300 py-3">Find Us</p >
           <ul className="divide-y divide-gray-300">
             <li className="flex justify-between items-center py-3">
               <a
-                href="#"
+                href="https://uncommons.notion.site"
                 className="text-gray-800 hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Notion
-              </a>
+              </a >
               <span>&#8599;</span>
             </li>
             <li className="flex justify-between items-center py-3">
               <a
-                href="#"
+                href="https://telegram.me/theuncommons"
                 className="text-gray-800 hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Telegram
-              </a>
+              </a >
               <span>&#8599;</span>
             </li>
             <li className="flex justify-between items-center py-3">
               <a
-                href="#"
+                href="https://x.com/Un__commons"
                 className="text-gray-800 hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 X (Twitter)
-              </a>
+              </a >
               <span>&#8599;</span>
             </li>
             <li className="flex justify-between items-center py-3">
               <a
-                href="#"
+                href="https://blog.uncommons.cc"
                 className="text-gray-800 hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Blog
-              </a>
+              </a >
               <span>&#8599;</span>
             </li>
           </ul>

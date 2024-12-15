@@ -69,7 +69,7 @@ export default function Home() {
         </div>
 
         {/* Content Grid */}
-        <div className="flex flex-row mt-[260px] w-3/5 mx-auto justify-center items-center items-stretch">
+        <div className="flex flex-row py-44 w-3/5 mx-auto justify-center items-center items-stretch">
           <div className="w-[33%] p-4 flex flex-col">
             <a href="https://uncommons.notion.site/Onboarding-Guide-1512d6bf93b8800aa876fde907caa7ba?pvs=4">
               <div className="flex justify-center mb-9">
