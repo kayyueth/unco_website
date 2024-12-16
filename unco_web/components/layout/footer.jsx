@@ -3,7 +3,7 @@
 export const Footer = () => {
   return (
     <footer className="w-full bg-white relative z-20 flex items-center justify-center mx-auto ">
-      <div className="md:w-3/5 w-4/5 mt-10 ">
+      <div className="w-full px-[10%] mt-10 ">
         <hr className="border-gray-300 py-2"/>
         <div className="flex items-center justify-between md:mb-24 mb-16">
           < img src='/logo_icon.svg'/>

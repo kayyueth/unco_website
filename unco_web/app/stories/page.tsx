@@ -27,8 +27,8 @@ export default function Stories() {
         </div>
 
       {/* Spacer to occupy space for the fixed section */}
-      <div className="relative h-screen">
-        <h1 className='absolute px-5 top-1/2 md:left-1/3 transform -translate-y-1/2 md:-translate-x-1/2 text-left text-midGray text-3xl md:text-5xl font-by57 z-10'>DECENTRALIZED <br/>STORIES</h1>
+      <div className="flex h-screen items-center">
+        <h1 className='text-left px-[10%] md:px-[25%] text-midGray text-3xl md:text-5xl font-by57 z-10'>DECENTRALIZATION <br/>CULTURE LAB</h1>
       </div>
 
       {/* Gradient Overlay */}
@@ -40,7 +40,7 @@ export default function Stories() {
 {/*       <div className="w-[53%] min-h-[250px] text-left text-midGray text-5xl font-by57">
             
           </div> */}
-          <div className="px-5 w-full md:w-[34%] min-h-[250px] text-left md:ml-[25%] flex flex-col gap-3">
+          <div className="px-[10%] w-full min-h-[250px] text-left md:ml-[75%] flex flex-col gap-3">
             
             <h1 className="text-brown text-base md:text-lg">What's happening in the decentralized <br/> mini-societies in the global world?</h1>
             <p className="text-lightGray text-sm">Click to view the stories <br/> from Uncommons community members.</p>
@@ -50,7 +50,7 @@ export default function Stories() {
           </div>
           <StoriesList/>
           {/* <div><Map/></div> */}
-          <div className="px-5 w-full md:w-[53%] min-h-[200px] text-left flex items-center">
+          <div className="px-[10%] w-full md:w-[53%] min-h-[200px] text-left flex items-center">
             <h1 className="text-black text-sm md:text-lg">The World Above World: <br/> Entering an Uncommon Layer of Reality</h1>
           </div>
         </div>

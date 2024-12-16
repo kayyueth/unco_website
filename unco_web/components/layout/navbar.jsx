@@ -12,7 +12,7 @@ export const Navbar = () => {
 
   return (
     <nav className="absolute top-0 left-0 w-full z-20 bg-transparent">
-      <div className="max-w-screen-xxl flex items-center justify-between mx-auto md:px-[100px] px-[35px] py-10">
+      <div className="flex items-center justify-between mx-auto px-[10%] py-10">
         {/* Logo */}
         <a href="/" className="flex items-center space-x-2">
           <img src="/logo.svg" className="h-12" alt="Logo" />
