@@ -3,16 +3,15 @@
 export const Footer = () => {
   return (
     <footer className="w-full bg-white relative z-20 flex items-center justify-center mx-auto ">
-      <div className="w-3/5 mt-10 ">
-        {/* Desktop View */}
-        <hr className="hidden md:block border-gray-300 py-2"/>
-        <div className="hidden md:flex items-center justify-between mb-24">
+      <div className="md:w-3/5 w-4/5 mt-10 ">
+        <hr className="border-gray-300 py-2"/>
+        <div className="flex items-center justify-between md:mb-24 mb-16">
           < img src='/logo_icon.svg'/>
-          <ul className="flex justify-around space-x-8 font-medium">
+          <ul className="flex justify-around space-x-4 text-sm md:text-lg font-medium">
             <li>
               <a
                 href=" "
-                className="text-black hover:underline"
+                className="text-black"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -51,62 +50,7 @@ export const Footer = () => {
             </li>
           </ul>
         </div>
-        <p className="text-gray-400 flex mb-20">@Uncommons 2024</p >
-
-        {/* Mobile View */}
-        <div className="md:hidden">
-          <p className="text-gray-800 font-medium border-b border-gray-300 py-3">Find Us</p >
-          <ul className="divide-y divide-gray-300">
-            <li className="flex justify-between items-center py-3">
-              <a
-                href="https://uncommons.notion.site"
-                className="text-gray-800 hover:underline"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Notion
-              </a >
-              <span>&#8599;</span>
-            </li>
-            <li className="flex justify-between items-center py-3">
-              <a
-                href="https://telegram.me/theuncommons"
-                className="text-gray-800 hover:underline"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Telegram
-              </a >
-              <span>&#8599;</span>
-            </li>
-            <li className="flex justify-between items-center py-3">
-              <a
-                href="https://x.com/Un__commons"
-                className="text-gray-800 hover:underline"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                X (Twitter)
-              </a >
-              <span>&#8599;</span>
-            </li>
-            <li className="flex justify-between items-center py-3">
-              <a
-                href="https://blog.uncommons.cc"
-                className="text-gray-800 hover:underline"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Blog
-              </a >
-              <span>&#8599;</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-          {/* Footer Note */}
-        <div className="mt-6 mb-5 ml-5 text-left text-gray-800 text-sm md:hidden">
-          &copy; Uncommons 2024
+        <p className="text-gray-400 flex text-sm md:text-lg md:mb-20 mb-16">@Uncommons 2024</p >
       </div>
     </footer>
   );
