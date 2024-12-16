@@ -9,9 +9,9 @@ const FallingBlocks: React.FC = () => {
     const engine = Matter.Engine.create();
     const { world } = engine;
 
-    // 设置重力方向
-    engine.gravity.y = 1; // 重力向下
+    engine.gravity.y = 1; 
 
+    // create render engine
     const render = Matter.Render.create({
       element: sceneRef.current!,
       engine: engine,
@@ -19,21 +19,42 @@ const FallingBlocks: React.FC = () => {
         width: 800,
         height: 600,
         wireframes: false,
-        background: "#FFFFFF", // 设置背景颜色
-        showDebug: true, // 开启调试模式以查看是否渲染
+        background: "#FFFFFF", 
+        showDebug: true, 
       },
     });
 
-    // 创建运行器
     const runner = Matter.Runner.create();
 
-    // 创建地板
-    const ground = Matter.Bodies.rectangle(400, 580, 800, 40, {
-      isStatic: true,
-      render: { fillStyle: "#6C6C6C" },
-    });
+    // create boundary
+    const boundaries = [
+        Matter.Bodies.rectangle(400, 0, 800, 20, { // top
+          isStatic: true,
+          restitution: 1, 
+          render: { fillStyle: "#6C6C6C" },
+          label: "Top",
+        }),
+        Matter.Bodies.rectangle(400, 600, 800, 20, { // bottom
+          isStatic: true,
+          restitution: 1,
+          render: { fillStyle: "#6C6C6C" },
+          label: "Bottom",
+        }),
+        Matter.Bodies.rectangle(0, 300, 20, 600, { // left
+          isStatic: true,
+          restitution: 1,
+          render: { fillStyle: "#6C6C6C" },
+          label: "Left",
+        }),
+        Matter.Bodies.rectangle(800, 300, 20, 600, { // right
+          isStatic: true,
+          restitution: 1,
+          render: { fillStyle: "#6C6C6C" },
+          label: "Right",
+        }),
+    ];
 
-    // 创建不同形状的物体
+    // create shapes
     const shapes = [
         Matter.Bodies.rectangle(100, 50, 60, 60, {
             restitution:0.8,
@@ -61,15 +82,25 @@ const FallingBlocks: React.FC = () => {
         }),
     ];
 
-    // 添加所有物体到物理世界
-    Matter.World.add(world, [ground, ...shapes]);
-    console.log("Shapes added:", shapes);
+    Matter.World.add(world, [...boundaries, ...shapes]);
 
-    // 运行引擎和渲染器
+    // drag feature
+    const mouse = Matter.Mouse.create(render.canvas); 
+    const mouseConstraint = Matter.MouseConstraint.create(engine, {
+        mouse: mouse,
+        constraint: {
+        stiffness: 0.2, 
+        render: { visible: false }, 
+        },
+    });
+
+    Matter.World.add(world, mouseConstraint);
+    render.mouse = mouse;
+
     Matter.Runner.run(runner, engine);
     Matter.Render.run(render);
 
-    // 清理函数
+    // remove everything
     return () => {
       Matter.Render.stop(render);
       Matter.Runner.stop(runner);

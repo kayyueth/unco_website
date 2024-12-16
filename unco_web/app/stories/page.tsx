@@ -1,6 +1,5 @@
 import Map from '@/components/ui/map' 
-import Stats from '@/components/ui/stats';
-import FallingBlocks from '@/components/ui/stats2'
+import FallingBlocks from '@/components/ui/falling_block'
 
 export default function Stories() {
   
