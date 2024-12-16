@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "flowbite": "^2.5.2",
-    "gsap": "^3.12.5",
     "lucide-react": "^0.468.0",
     "mapbox-gl": "^3.8.0",
     "matter-js": "^0.20.0",
@@ -20,6 +19,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@types/matter-js": "^0.19.8",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",

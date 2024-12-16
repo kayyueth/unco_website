@@ -1,33 +1,19 @@
 "use client";
 import Map from '@/components/ui/map';
-import { useEffect,  useState } from "react";
+/* import { useEffect,  useState } from "react"; */
 import FallingBlocks from '@/components/ui/falling_block';
 import { StoriesList } from '@/components/ui/stories_list';
 
 export default function Stories() {
-  const [scrollOpacity, setScrollOpacity] = useState(1);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      const maxScroll = window.innerHeight * 1.5; // Adjust maximum scroll point
-      const opacity = Math.max(1 - scrollTop / maxScroll, 0);
-      setScrollOpacity(opacity);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
     <div className="relative w-screen h-full overflow-x-hidden">
       {/* Fixed Background Section */}
       <div className="fixed top-0 left-0 w-full h-full z-0">
         
-        <div
+        {/* <div
           className="relative w-full h-full"
           style={{ opacity: scrollOpacity }}
-        >
+        > */}
           <img
             className="w-full h-full object-cover"
             src="/stories_bg.svg"
@@ -39,7 +25,6 @@ export default function Stories() {
             alt="Overlay"
           />
         </div>
-      </div>
 
       {/* Spacer to occupy space for the fixed section */}
       <div className="relative h-screen">
@@ -69,11 +54,12 @@ export default function Stories() {
             <h1 className="text-black text-sm md:text-lg">The World Above World: <br/> Entering an Uncommon Layer of Reality</h1>
           </div>
         </div>
+
         <div className='flex justify-center z-100'>
             <FallingBlocks />
-      </div>
-      </div>
+        </div>
 
+      </div>
     </div>
   );
 }
