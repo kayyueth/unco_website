@@ -55,15 +55,31 @@ export default function Map() {
     const popupContent = document.createElement("div");
     popupContent.className =
       "p-2 hidden opacity-0 scale-90 group-hover:z-100 group-hover:block group-hover:opacity-100 group-hover:scale-100 transition-all duration-300";
-    popupContent.innerHTML = `
-      <p class="text-darkgray text-sm mb-8">${city.description}</p>
-      <div class="flex items-center gap-2">
-        <div class="w-2 h-2 rounded-full bg-[#ABC9A1]"></div>
-        <h3 class="text-darkgray text-sm">${city.name}</h3>
+      // Dynamically iterate through articles and build article list
+    const articleHTML = city.article
+    .map(
+      (article) => `
+      <div class="mb-4">
+        <h3 class="text-darkgray text-sm mb-1">${article.title}</h3>
+        <a href="${article.link}" target="_blank" class="text-lightgray text-xs underline flex items-center gap-1">
+          Read More 
+        </a> <span>→</span>
       </div>
-      <div class="border-t border-gray-300 my-2 w-full"></div>
-      <h4 class="text-lightgray text-[10px] track-tighter">${formatCoords(city.coords)}</h4>
-    `;
+    `
+    )
+    .join("");
+    
+    popupContent.innerHTML = `
+    ${articleHTML}
+    <div class="flex items-center gap-2 mt-4">
+      <div class="w-2 h-2 rounded-full bg-[#ABC9A1]"></div>
+      <h3 class="text-darkgray text-sm">${city.name}</h3>
+    </div>
+    <div class="border-t border-gray-300 my-2 w-full"></div>
+    <h4 class="text-lightgray text-[10px] tracking-tighter">${formatCoords(
+      city.coords
+    )}</h4>
+  `;
 
     // Append marker and popup content to the shared container
     container.appendChild(markerContent);
@@ -85,8 +101,6 @@ export default function Map() {
   })
     .setLngLat(city.coords)
     .addTo(map.current);
-
-
   
 /*       new mapboxgl.Marker({ color: "#C98292" }) // Custom marker color
         .setLngLat(city.coords)
