@@ -11,7 +11,7 @@ mapboxgl.accessToken = 'pk.eyJ1Ijoid2F0ZXJsaWx5LWx5Y2hpLXpob3UiLCJhIjoiY200cGpqM
 export default function Map() {
   const mapContainer = useRef(null);
   const map = useRef(null);
-  
+
   useEffect(() => {
     console.log("Initializing Map...");
     if (!mapContainer.current) {
@@ -29,6 +29,16 @@ export default function Map() {
   
     // Add navigation controls
     map.current.addControl(new mapboxgl.NavigationControl());
+
+    map.current.scrollZoom.disable();
+
+    // Enable scrollZoom only when user interacts with the map
+    map.current.on('click', () => {
+      map.current.scrollZoom.enable();
+    });
+    map.current.on('mouseout', () => {
+      map.current.scrollZoom.disable();
+    });
   
   // Add markers with hover effect
   cities.forEach((city) => {

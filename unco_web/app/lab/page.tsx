@@ -2,22 +2,22 @@
 export default function Lab() {
   return (
       <div>
-        <div className="flex flex-col items-center w-4/5 mx-auto">
+        <div className="relative items-center w-4/5 mx-auto">
 
-            <div className="mt-44 md:w-[53%] min-h-[500px] flex items-center text-left text-midGray text-5xl font-by57">
+{/*             <div className="mt-44 md:w-[53%] min-h-[500px] flex items-center text-left text-midGray text-5xl font-by57">
               <h1>Decentralization<br/>Culture Lab</h1>
+            </div> */}
+
+            <div className="relative h-screen">
+              <h1 className='absolute px-5 top-1/2 md:left-1/3 transform -translate-y-1/2 md:-translate-x-1/2 text-left text-midGray text-3xl md:text-5xl font-by57 z-10'>DECENTRALIZATION <br/>CULTURE LAB</h1>
             </div>
             
-            <div className="mt-20 w-full flex flex-col px-20 items-center md:flex-row md:items-start gap-10 md:gap-[10%] px-6 md:px-[100px]">
-              {/* Image Section */}
-              <img
-                src="/lab_img.svg"
-                className="w-full max-w-[310px] md:w-[40%] object-contain"
-                alt="Sculpture"
-              />
-
+            <div className="flex flex-col">
+              <h1 className="font-by57">01 LAB PROJECTS</h1>
+              {/* <div className="mt-20 w-full flex flex-col px-20 items-center md:flex-row md:items-start gap-10 md:gap-[10%] px-6 md:px-[100px]"> */}
+            {/* <img src="/lab_img.svg" className="w-full max-w-[310px] md:w-[40%] object-contain" alt="Sculpture" />*/}  
               {/* Content Section */}
-              <div className="flex flex-wrap gap-12 text-left text-midGray text-sm">
+              <div className="flex flex-wrap gap-12 text-left text-midGray text-sm md:w-[80%]">
                 <div className="w-full lg:max-w-[45%]">
                   <h1 className="font-semibold text-lg mb-2 text-brown">Summer of Protocols CN</h1>
                   <p className="text-black">
@@ -60,6 +60,8 @@ export default function Lab() {
                   </p>
                 </div>
               </div>
+            {/* </div> */}
+            
             </div>
 
 
