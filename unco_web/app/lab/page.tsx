@@ -16,17 +16,17 @@ const Lab = () => {
               <h1>Decentralization<br/>Culture Lab</h1>
             </div> */}
 
-            <div className="relative h-screen">
-              <h1 className='absolute px-5 top-1/2 md:left-1/3 transform -translate-y-1/2 md:-translate-x-1/2 text-left text-midGray text-3xl md:text-5xl font-by57 z-10'>DECENTRALIZATION <br/>CULTURE LAB</h1>
+            <div className="flex h-screen items-center">
+              <h1 className='text-left md:px-32 text-midGray text-3xl md:text-5xl font-by57 z-10'>DECENTRALIZATION <br/>CULTURE LAB</h1>
             </div>
             
-            <div className="flex flex-col">
-              <h1 className="font-by57">01 LAB PROJECTS</h1>
+            <div className="flex flex-col md:px-32 gap-10 text-[#8AAFAF]">
+              <h1 className="font-by57 text-2xl">01 LAB PROJECTS</h1>
               {/* <div className="mt-20 w-full flex flex-col px-20 items-center md:flex-row md:items-start gap-10 md:gap-[10%] px-6 md:px-[100px]"> */}
             {/* <img src="/lab_img.svg" className="w-full max-w-[310px] md:w-[40%] object-contain" alt="Sculpture" />*/}  
               {/* Content Section */}
-              <div className="flex flex-wrap gap-12 text-left text-midGray text-sm md:w-[80%]">
-                <div className="w-full lg:max-w-[45%]">
+              <div className="flex flex-wrap gap-16 text-left text-midGray text-sm">
+                <div className="w-full md:max-w-[45%]">
                   <h1 className="font-semibold text-lg mb-2 mt-2">Summer of Protocols CN</h1>
                   <p className="text-black mt-3">
                     Tech Art Project. Supported over 10 artists and writers, focusing on new
@@ -88,31 +88,33 @@ const Lab = () => {
             
             </div>
 
-
-            <div className="flex flex-col mt-44 mb-44 w-full gap-2 items-center md:w-[53%] md:items-start">
-              <div className="flex flex-wrap gap-4 justify-center md:justify-start">
-                <img
-                  src="/lab_book1.svg"
-                  className="w-1/3 md:w-1/5 md:max-h-[200px] object-contain"
-                  alt="book1"
-                />
-                <img
-                  src="/lab_book2.svg"
-                  className="w-1/3 md:w-1/5 md:max-h-[200px] object-contain"
-                  alt="book2"
-                />
-                <img
-                  src="/lab_book3.svg"
-                  className="w-1/3 md:w-1/5 md:max-h-[200px] object-contain"
-                  alt="book3"
-                />
-                <img
-                  src="/lab_book4.svg"
-                  className="w-1/3 max-h-[185px] md:w-1/6 md:max-h-[170px] object-contain"
-                  alt="book4"
-                />
+            <div className="flex flex-col md:px-32 gap-16 mt-28 mb-20">
+              <h1 className="font-by57 text-2xl text-[#8AAFAF]">02 LAB PUBLICATIONS</h1>
+              <div className="flex flex-col min-h-[200px] gap-10 items-center md:items-start">
+                <div className="flex gap-4 justify-start md:justify-start overflow-x-auto whitespace-nowrap">
+                  <img
+                    src="/lab_book1.svg"
+                    className="inline-block md:max-h-[200px] object-contain"
+                    alt="book1"
+                  />
+                  <img
+                    src="/lab_book2.svg"
+                    className="inline-block md:max-h-[200px] object-contain"
+                    alt="book2"
+                  />
+                  <img
+                    src="/lab_book3.svg"
+                    className="inline-block md:max-h-[200px] object-contain"
+                    alt="book3"
+                  />
+                  <img
+                    src="/lab_book4.svg"
+                    className="inline-block max-h-[200px] object-contain"
+                    alt="book4"
+                  />
+                </div>
+                <p className="text-xs text-left">Click to view books published by Uncommons</p>
               </div>
-              <p className="italic text-brown text-left">Books published by Uncommons</p>
             </div>
         </div>
     </div>
