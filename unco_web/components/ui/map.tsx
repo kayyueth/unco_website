@@ -43,7 +43,7 @@ export default function Map() {
     // Parent container with shared box for marker and popup
     const container = document.createElement("div");
     container.className =
-      "group relative w-auto max-w-40 h-auto bg-white border border-gray-300 shadow-md px-2 py-1 text-left font-spacemono text-xs transition-all duration-300 ease-in-out";
+      "group relative w-auto max-w-32 h-auto bg-white border border-gray-300 shadow-md px-1 py-1 text-left font-spacemono text-xs transition-all duration-300 ease-in-out";
 
     // Marker content (default visible)
     const markerContent = document.createElement("div");
@@ -59,11 +59,18 @@ export default function Map() {
     const articleHTML = city.article
     .map(
       (article) => `
-      <div class="mb-4">
-        <h3 class="text-darkgray text-sm mb-1">${article.title}</h3>
-        <a href="${article.link}" target="_blank" class="text-lightgray text-xs underline flex items-center gap-1">
-          Read More 
-        </a> <span>→</span>
+      <div class="mb-10">
+        <h3 class="text-darkgray text-sm mb-1 font-neue">${article.title}</h3>
+        <div class="flex items-center gap-1">
+          <a 
+            href="${article.link}" 
+            target="_blank" 
+            class="text-lightgray font-neue text-xs underline"
+          >
+            Read More
+          </a>
+          <span class="no-underline">⟶</span>
+        </div>
       </div>
     `
     )
@@ -73,7 +80,7 @@ export default function Map() {
     ${articleHTML}
     <div class="flex items-center gap-2 mt-4">
       <div class="w-2 h-2 rounded-full bg-[#ABC9A1]"></div>
-      <h3 class="text-darkgray text-sm">${city.name}</h3>
+      <h3 class="text-darkgray text-xs">${city.name}</h3>
     </div>
     <div class="border-t border-gray-300 my-2 w-full"></div>
     <h4 class="text-lightgray text-[10px] tracking-tighter">${formatCoords(

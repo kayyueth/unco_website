@@ -1,7 +1,8 @@
 "use client";
 import Map from '@/components/ui/map';
 import { useEffect,  useState } from "react";
-import FallingBlocks from '@/components/ui/falling_block'
+import FallingBlocks from '@/components/ui/falling_block';
+import { StoriesList } from '@/components/ui/stories_list';
 
 export default function Stories() {
   const [scrollOpacity, setScrollOpacity] = useState(1);
@@ -62,8 +63,9 @@ export default function Stories() {
           <div className="w-full mt-6 mb-44">
             <Map />
           </div>
+          <StoriesList/>
           {/* <div><Map/></div> */}
-          <div className="px-5 w-full md:w-[53%] min-h-[200px] text-left">
+          <div className="px-5 w-full md:w-[53%] min-h-[200px] text-left flex items-center">
             <h1 className="text-black text-sm md:text-lg">The World Above World: <br/> Entering an Uncommon Layer of Reality</h1>
           </div>
         </div>
