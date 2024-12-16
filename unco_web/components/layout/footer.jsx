@@ -10,7 +10,7 @@ export const Footer = () => {
           <ul className="flex justify-around space-x-4 text-sm md:text-lg font-medium">
             <li>
               <a
-                href=" "
+                href="https://uncommons.notion.site"
                 className="text-black"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -50,7 +50,7 @@ export const Footer = () => {
             </li>
           </ul>
         </div>
-        <p className="text-gray-400 flex text-sm md:text-lg md:mb-20 mb-16">@Uncommons 2024</p >
+        <p className="text-gray-400 flex text-sm md:text-lg md:mb-20 mb-16">@Uncommons 2024</p>
       </div>
     </footer>
   );
