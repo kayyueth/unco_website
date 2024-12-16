@@ -2,9 +2,15 @@
 export default function Lab() {
   return (
       <div>
-        <div className="flex flex-col items-center w-4/5 mx-auto">
+        <div className="flex flex-col items-center sm:w-4/5 mx-auto">
 
-            <div className="mt-44 md:w-[53%] min-h-[500px] flex items-center text-left text-midGray text-5xl font-by57">
+            {/* Mobile Version */}
+            <div className="sm:hidden">
+              <img src="/lab_mobile.svg" className="w-full"/>
+            </div>
+
+            {/* Web Version */}
+            <div className="sm:mt-44 md:w-[53%] sm:min-h-[500px] flex items-center text-left text-midGray font-by57 text-xl sm:text-5xl">
               <h1>Decentralization<br/>Culture Lab</h1>
             </div>
             
@@ -12,7 +18,7 @@ export default function Lab() {
               {/* Image Section */}
               <img
                 src="/lab_img.svg"
-                className="w-full max-w-[310px] md:w-[40%] object-contain"
+                className="w-full max-w-[310px] md:w-[40%] object-contain hidden sm:block"
                 alt="Sculpture"
               />
 
