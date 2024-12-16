@@ -1,21 +1,34 @@
+'use client';
+import { useState } from "react";
 
-export default function Lab() {
+const Lab = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleContent = () => {
+    setIsOpen(!isOpen); 
+  };
+
   return (
       <div>
-        <div className="flex flex-col items-center sm:w-4/5 mx-auto">
+        <div className="flex flex-col items-center md:w-4/5 mx-auto">
 
-            {/* Mobile Version */}
-            <div className="sm:hidden">
+              {/* Mobile-Only Image */}
+            <div className="md:hidden w-full">
               <img src="/lab_mobile.svg" className="w-full"/>
             </div>
 
-            {/* Web Version */}
-            <div className="sm:mt-44 md:w-[53%] sm:min-h-[500px] flex items-center text-left text-midGray font-by57 text-xl sm:text-5xl">
+            {/* Mobile-Version Title */}
+            <div className="md:hidden absolute top-[16%] left-[10%] md:items-center md:text-left text-midGray font-by57 text-2xl">
+              <h1>DECENTRALIZATION<br/>CULTURE LAB</h1>
+            </div>
+
+            {/* Web-Version Title */}
+            <div className="hidden md:mt-44 md:w-[53%] md:min-h-[500px] md:flex md:items-center md:text-left text-midGray font-by57 md:text-5xl">
               <h1>Decentralization<br/>Culture Lab</h1>
             </div>
             
-            <div className="mt-20 w-full flex flex-col px-20 items-center md:flex-row md:items-start gap-10 md:gap-[10%] px-6 md:px-[100px]">
-              {/* Image Section */}
+            <div className="mt-20 w-full flex flex-col px-20 md:items-center md:flex-row md:items-start md:gap-10 md:gap-[10%] px-6 md:px-[100px]">
+              {/* Web-Only Image */}
               <img
                 src="/lab_img.svg"
                 className="w-full max-w-[310px] md:w-[40%] object-contain hidden sm:block"
@@ -23,26 +36,27 @@ export default function Lab() {
               />
 
               {/* Content Section */}
+              <h1 className="md:hidden font-by57 text-2xl text-[8AAFAF]">01 LAB PROJECTS</h1>
               <div className="flex flex-wrap gap-12 text-left text-midGray text-sm">
                 <div className="w-full lg:max-w-[45%]">
-                  <h1 className="font-semibold text-lg mb-2 text-brown">Summer of Protocols CN</h1>
-                  <p className="text-black">
+                  <h1 className="font-semibold text-lg mb-2 mt-2">Summer of Protocols CN</h1>
+                  <p className="text-black mt-3">
                     Tech Art Project. Supported over 10 artists and writers, focusing on new
                     media art, crypto art, and anonymous culture research. Initiated by
                     Ethereum Foundation, co-sponsored by Ethereum Foundation and GCC.
                   </p>
                 </div>
                 <div className="w-full lg:max-w-[45%]">
-                  <h1 className="font-semibold text-lg mb-2 text-brown">Raw School</h1>
-                  <p className="text-black">
+                  <h1 className="font-semibold text-lg mb-2">Raw School</h1>
+                  <p className="text-black mt-3">
                     Uncommons' crypto study room, focusing on open-style liberal arts
                     education. Driven by peer-to-peer discussions and mentorship, aiming to
                     enhance community members' understanding of crypto humanities.
                   </p>
                 </div>
                 <div className="w-full lg:max-w-[45%]">
-                  <h1 className="font-semibold text-lg mb-2 text-brown">Regenerative crypto-economics</h1>
-                  <p className="text-black">
+                  <h1 className="font-semibold text-lg mb-2">Regenerative crypto-economics</h1>
+                  <p className="mt-3">
                     Broadcasting regenerative finance and crypto culture in China. In 2023,
                     our squad translated the GreenPill and ImpactDAO books. Over the next two
                     years, community members conducted dozens of podcast interviews on
@@ -51,20 +65,36 @@ export default function Lab() {
                 </div>
                 <div className="w-full  lg:max-w-[45%]">
                   <h1 className="font-semibold text-lg mb-2 text-brown">Decentralized Science</h1>
-                  <p className="text-black">
+                  <p className="mt-3">
                     Uncommons' (formerly GreenPill CN community) lecture series,
                     discussions, and articles on decentralized science. Additionally,
                     Uncommons has donated $10,000 to the DeSci ecosystem.
                   </p>
                 </div>
+
+                {/* More Section */}
                 <div className="w-full lg:max-w-[45%]">
-                  <h1 className="font-semibold text-lg mb-2 text-brown">More</h1>
-                  <p className="text-black">
+                  <div className="md:hidden w-full border-t border-gray-300 my-4"></div>
+                  <div className="flex justify-between ml-2 md:ml-0 mr-2">
+                    <h1 className="md:font-semibold text-lg mb-1 mt-1">More</h1>
+                    <img
+                      src="/plus_icon.svg"
+                      alt="Toggle Content"
+                      className="cursor-pointer w-4 h-4 mt-2 md:hidden"
+                      onClick={toggleContent}
+                    />
+                  </div> 
+                  <p className={`${
+                        isOpen ? "block" : "hidden"
+                      } md:block ml-2 md:ml-0 text-gray-600 underline`}
+                    >
                     On-chain Governance <br />
                     Crypto Regulation <br />
                     Ethereum Translation Team
                   </p>
+                  <div className="md:hidden w-full border-t border-gray-300 my-4"></div>
                 </div>
+
               </div>
             </div>
 
@@ -98,3 +128,5 @@ export default function Lab() {
     </div>
   );
 }
+
+export default Lab;
