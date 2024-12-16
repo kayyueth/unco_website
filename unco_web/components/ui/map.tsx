@@ -24,7 +24,7 @@ export default function Map() {
       container: mapContainer.current,
       style: "mapbox://styles/waterlily-lychi-zhou/cm4ps1mnz008h01r0cp4g1nku",
       center: [70, 35.8617],
-      zoom: 2,
+      zoom: 1.5,
     });
   
     // Add navigation controls

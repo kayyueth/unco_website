@@ -52,7 +52,7 @@ export default function Home() {
       {/* Content Section with Full White Background */}
       <div className="relative z-10 bg-white">
  
-        <div className="text-left px-10 md:text-center">
+        <div className="text-left px-[10%] md:text-center">
           <h1 className="text-4xl font-by57">Uncommons</h1>
           <h3 className="text-xl font-by57">IS A RESEARCHER GARDEN</h3>
           <p className="mt-8 font-spacemono">FOR DECENTRALIZED THOUGHT</p>
@@ -68,7 +68,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-3 py-24 px-5 w-full md:w-3/5 mx-auto">
+        <div className="grid gap-8 md:grid-cols-3 py-24 px-[10%] w-full md:w-3/5 mx-auto">
         
         {/* Getting Started */}
         <div className="flex flex-row gap-4 md:flex-col items-center">
