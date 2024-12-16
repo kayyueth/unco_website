@@ -1,22 +1,23 @@
 "use client";
 import Map from '@/components/ui/map';
+import FallingBlocks from '@/components/ui/falling_block'
 import { useEffect,  useState } from "react";
 
+const [scrollOpacity, setScrollOpacity] = useState(1);
+
+useEffect(() => {
+  const handleScroll = () => {
+    const scrollTop = window.scrollY;
+    const maxScroll = window.innerHeight * 1.5; // Adjust maximum scroll point
+    const opacity = Math.max(1 - scrollTop / maxScroll, 0);
+    setScrollOpacity(opacity);
+  };
+
+  window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
+
 export default function Stories() {
-  const [scrollOpacity, setScrollOpacity] = useState(1);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      const maxScroll = window.innerHeight * 1.5; // Adjust maximum scroll point
-      const opacity = Math.max(1 - scrollTop / maxScroll, 0);
-      setScrollOpacity(opacity);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
     <div className="relative w-screen h-full">
       {/* Fixed Background Section */}
@@ -66,7 +67,10 @@ export default function Stories() {
             <h1 className="text-black text-lg">The World Above World: <br/> Entering an Uncommon Layer of Reality</h1>
           </div>
         </div>
-      </div>
+          <div className='flex justify-center'>
+            <FallingBlocks />
+          </div>
+    </div>
     </div>
   );
 }
