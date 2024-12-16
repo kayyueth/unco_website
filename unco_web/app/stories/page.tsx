@@ -2,6 +2,7 @@
 import Map from '@/components/ui/map';
 import FallingBlocks from '@/components/ui/falling_block'
 import { useEffect,  useState } from "react";
+import FallingBlocks from '@/components/ui/falling_block'
 
 const [scrollOpacity, setScrollOpacity] = useState(1);
 
@@ -67,10 +68,11 @@ export default function Stories() {
             <h1 className="text-black text-lg">The World Above World: <br/> Entering an Uncommon Layer of Reality</h1>
           </div>
         </div>
-          <div className='flex justify-center'>
+        <div className='flex justify-center z-100'>
             <FallingBlocks />
-          </div>
-    </div>
+      </div>
+      </div>
+
     </div>
   );
 }
