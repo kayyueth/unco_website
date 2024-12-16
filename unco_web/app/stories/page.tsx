@@ -19,7 +19,7 @@ import FallingBlocks from '@/components/ui/falling_block'
 
 export default function Stories() {
   return (
-    <div className="relative w-screen h-full">
+    <div className="relative w-screen h-full overflow-x-hidden">
       {/* Fixed Background Section */}
       <div className="fixed top-0 left-0 w-full h-full z-0">
         
@@ -41,7 +41,7 @@ export default function Stories() {
 
       {/* Spacer to occupy space for the fixed section */}
       <div className="relative h-screen">
-        <h1 className='absolute top-1/2 left-1/3 transform -translate-y-1/2 -translate-x-1/2 text-left text-midGray text-5xl font-by57 z-10'>DECENTRALIZED <br/>STORIES</h1>
+        <h1 className='absolute px-5 top-1/2 md:left-1/3 transform -translate-y-1/2 md:-translate-x-1/2 text-left text-midGray text-3xl md:text-5xl font-by57 z-10'>DECENTRALIZED <br/>STORIES</h1>
       </div>
 
       {/* Gradient Overlay */}
@@ -50,12 +50,12 @@ export default function Stories() {
       {/* Content Section */}
       <div className="relative z-20 bg-white pt-44">
         <div className="flex flex-col items-center w-full">
-{/*           <div className="w-[53%] min-h-[250px] text-left text-midGray text-5xl font-by57">
+{/*       <div className="w-[53%] min-h-[250px] text-left text-midGray text-5xl font-by57">
             
           </div> */}
-          <div className="w-[34%] min-h-[250px] text-left ml-[25%] flex flex-col gap-3">
+          <div className="px-5 w-full md:w-[34%] min-h-[250px] text-left md:ml-[25%] flex flex-col gap-3">
             
-            <h1 className="text-brown text-lg">What's happening in the decentralized <br/> mini-societies in the global world?</h1>
+            <h1 className="text-brown text-base md:text-lg">What's happening in the decentralized <br/> mini-societies in the global world?</h1>
             <p className="text-lightGray text-sm">Click to view the stories <br/> from Uncommons community members.</p>
           </div>
           <div className="w-full mt-6 mb-44">
@@ -63,8 +63,8 @@ export default function Stories() {
           </div>
           
           {/* <div><Map/></div> */}
-          <div className="w-[53%] min-h-[250px] text-left">
-            <h1 className="text-black text-lg">The World Above World: <br/> Entering an Uncommon Layer of Reality</h1>
+          <div className="px-5 w-full md:w-[53%] min-h-[200px] text-left">
+            <h1 className="text-black text-sm md:text-lg">The World Above World: <br/> Entering an Uncommon Layer of Reality</h1>
           </div>
         </div>
 
