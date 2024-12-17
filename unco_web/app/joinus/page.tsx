@@ -6,7 +6,7 @@ export default function JoinUs() {
         <div className="flex px-[10%] md:px-[25%] mt-80 items-center">
           <h1 className='text-left text-midGray text-3xl md:text-5xl font-by57 z-10'>RESEARCH SCOPE</h1>
         </div>
-        <div className="flex px-[10%] md:px-[25%] mt-40 mb-40 items-center">
+        <div className="flex px-[10%] md:px-[25%] mt-20 mb-20 items-center">
           <img src='/joinus_dandelion.svg'/>
         </div>
 
