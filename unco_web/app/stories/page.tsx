@@ -57,13 +57,13 @@ export default function Stories() {
           </div>
         </div>
 
-        {/* <div className='flex justify-center z-100'>
+        <div className='flex justify-center z-100'>
             <FallingBlocks />
-        </div> */}
-
-        <div className='flex justify-center mt-10 px-[10%]'>
-          <img src='/pedals/sum.svg'/>
         </div>
+
+        {/* <div className='flex justify-center mt-10 px-[10%]'>
+          <img src='/pedals/sum.svg'/>
+        </div> */}
 
       </div>
     </div>
