@@ -4,15 +4,15 @@ import { useState } from "react";
 export default function Menu() {
     return (
         <div>
-            <div className="border-b-2 ml-12 mr-10">
-                <p className="w-3/4 mt-[40%] pb-5">Uncommons is a researcher garden for decentralized thought and techno-social philosophies.</p>
+            <div className="border-b-2 px-[10%]">
+                <p className="w-3/4 mt-[35%] pb-5">Uncommons is a researcher garden for decentralized thought and techno-social philosophies.</p>
             </div>
-            <div className="mt-[20%] ml-12 grid space-y-2">
-                <a href="/home" className="text-2xl">About</a>
-                <a href="/stories" className="text-2xl">Stories</a>
-                <a href="/lab" className="text-2xl">Lab</a>
-                <a href="/joinus" className="text-2xl">Join Us</a>
-                <a href="" className="text-2xl">Connect Wallet</a>
+            <div className="mt-[10%] ml-12 grid space-y-2">
+                <a href="/home" className="text-xl">About</a>
+                <a href="/stories" className="text-xl">Stories</a>
+                <a href="/lab" className="text-xl">Lab</a>
+                <a href="/joinus" className="text-xl">Join Us</a>
+                <a href="" className="text-xl">Connect Wallet</a>
             </div>
 
             <div className="mt-[20%] ml-12 grid space-y-2">
