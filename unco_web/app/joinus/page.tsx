@@ -58,7 +58,6 @@ export default function JoinUs() {
                     OptimisimCN<br/>dDAO<br/>Shanhaiwoo<br/>Wamotopia<br/>the mu<br/>DeSci Asia
                   </p>
                 </div>
-
             </div>
             <div className="text-left flex-[2]">
                 <h3 className='font-semibold'>Our<br/>Partner</h3>
@@ -67,8 +66,7 @@ export default function JoinUs() {
                 </p>
             </div>
           </div>
-
-            </div>
         </div>
+      </div>
     );
 }
