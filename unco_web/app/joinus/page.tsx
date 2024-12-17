@@ -44,9 +44,15 @@ export default function JoinUs() {
           <div className='flex flex-col mt-16 mb-[6%] md:flex-row gap-16'>
             <div className="text-left flex-[1]">
                 <h3 className='font-semibold'>Cooperative<br/>Network</h3>
-                <p className='mt-6'>
-                    GCC<br/>PlanckerDAO<br/>4SEAS<br/>ETHPanda<br/>LXDAO<br/>AAStar<br/>OptimisimCN<br/>dDAO<br/>Shanhaiwoo<br/>Wamotopia<br/>the mu<br/>DeSci Asia
-                </p>
+                <div className='flex flex-row gap-20 md:flex-col md:gap-0 mt-6'>
+                  <p>
+                      GCC<br/>PlanckerDAO<br/>4SEAS<br/>ETHPanda<br/>LXDAO<br/>AAStar
+                  </p>
+                  <p>
+                    OptimisimCN<br/>dDAO<br/>Shanhaiwoo<br/>Wamotopia<br/>the mu<br/>DeSci Asia
+                  </p>
+                </div>
+
             </div>
             <div className="text-left flex-[2]">
                 <h3 className='font-semibold'>Our<br/>Partner</h3>

@@ -46,7 +46,7 @@ export default function Stories() {
             <h1 className="text-brown text-base md:text-lg">What's happening in the decentralized <br/> mini-societies in the global world?</h1>
             <p className="text-lightGray text-sm">Click to view the stories <br/> from Uncommons community members.</p>
           </div>
-          <div className="w-full mt-6 mb-44">
+          <div className="w-full mt-6 mb-10 md:mb-44">
             <Map />
           </div>
           <StoriesList/>
@@ -61,7 +61,7 @@ export default function Stories() {
             <FallingBlocks />
         </div> */}
 
-        <div className='flex justify-center mt-10'>
+        <div className='flex justify-center mt-10 px-[10%]'>
           <img src='/pedals/sum.svg'/>
         </div>
 

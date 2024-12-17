@@ -20,7 +20,7 @@ const Lab = () => {
       {/* <img src="/lab_img.svg" className="w-full max-w-[310px] md:w-[40%] object-contain" alt="Sculpture" />*/}  
         {/* Content Section */}
         <div className="flex flex-wrap gap-16 text-left text-midGray text-sm">
-          <div className="w-full md:max-w-[45%]">
+          <div className="w-full lg:max-w-[45%]">
             <h1 className="font-semibold text-lg mb-2 mt-2">Summer of Protocols CN</h1>
             <p className="text-black mt-3">
               Tech Art Project. Supported over 10 artists and writers, focusing on new
@@ -45,7 +45,7 @@ const Lab = () => {
               related topics.
             </p>
           </div>
-          <div className="w-full  lg:max-w-[45%]">
+          <div className="w-full lg:max-w-[45%]">
             <h1 className="font-semibold text-lg mb-2 text-brown">Decentralized Science</h1>
             <p className="mt-3">
               Uncommons' (formerly GreenPill CN community) lecture series,
@@ -84,7 +84,7 @@ const Lab = () => {
 
       <div className="flex flex-col px-[10%] md:px-[25%] gap-16 mt-28 mb-20">
         <h1 className="font-by57 text-2xl text-[#8AAFAF]">02 LAB PUBLICATIONS</h1>
-        <div className="flex flex-col min-h-[200px] gap-10 items-center md:items-start">
+        <div className="flex flex-col min-h-[200px] gap-10 items-start">
           <div className="flex gap-4 justify-start md:justify-start overflow-x-auto whitespace-nowrap">
             <img
               src="/lab_book1.svg"
