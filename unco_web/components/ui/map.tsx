@@ -40,55 +40,83 @@ export default function Map() {
       map.current.scrollZoom.disable();
     });
   
-  // Add markers with hover effect
-  cities.forEach((city) => {
-    const formatCoords = (coords) => {
-      const [lng, lat] = coords;
-  
-      const formattedLat = `${Math.abs(lat).toFixed(2)}° ${lat >= 0 ? "N" : "S"}`;
-      const formattedLng = `${Math.abs(lng).toFixed(2)}° ${lng >= 0 ? "E" : "W"}`;
-  
-      return `${formattedLat}, ${formattedLng}`;
-    };
-    // Parent container with shared box for marker and popup
-    const container = document.createElement("div");
-    container.className =
-      "group relative w-auto max-w-32 h-auto bg-white border border-gray-300 shadow-md px-1 py-1 text-left font-spacemono text-xs transition-all duration-300 ease-in-out";
+// Add markers with hover effect
+cities.forEach((city) => {
+  const formatCoords = (coords) => {
+    const [lng, lat] = coords;
 
-    // Marker content (default visible)
-    const markerContent = document.createElement("div");
-    markerContent.className =
-      "marker-content block transition-all duration-300 group-hover:hidden";
-    markerContent.innerHTML = `<div>${city.name}</div>`;
+    const formattedLat = `${Math.abs(lat).toFixed(2)}° ${lat >= 0 ? "N" : "S"}`;
+    const formattedLng = `${Math.abs(lng).toFixed(2)}° ${lng >= 0 ? "E" : "W"}`;
 
-    // Popup content (default hidden)
-    const popupContent = document.createElement("div");
-    popupContent.className =
-      "p-2 hidden opacity-0 scale-90 group-hover:z-100 group-hover:block group-hover:opacity-100 group-hover:scale-100 transition-all duration-300";
-      // Dynamically iterate through articles and build article list
-    const articleHTML = city.article
-    .map(
-      (article) => `
-      <div class="mb-10">
-        <h3 class="text-darkgray text-sm mb-1 font-neue">${article.title}</h3>
-        <div class="flex items-center gap-1">
-          <a 
-            href="${article.link}" 
-            target="_blank" 
-            class="text-lightgray font-neue text-xs underline"
+    return `${formattedLat}, ${formattedLng}`;
+  };
+
+  // Parent container with shared box for marker and popup
+  const container = document.createElement("div");
+  container.className =
+    "group relative w-auto max-w-36 h-auto bg-white border border-gray-300 shadow-md px-1 py-1 text-left font-spacemono text-xs transition-all duration-300 ease-in-out";
+
+  // Marker content (default visible)
+  const markerContent = document.createElement("div");
+  markerContent.className =
+    "marker-content block transition-all duration-300 group-hover:hidden";
+  markerContent.innerHTML = `<div>${city.name}</div>`;
+
+  // Popup content (default hidden)
+  const popupContent = document.createElement("div");
+  popupContent.className =
+    "p-2 hidden opacity-0 scale-90 group-hover:z-100 group-hover:block group-hover:opacity-100 group-hover:scale-100 transition-all duration-300";
+
+  // Article HTML (if any)
+  const articleHTML =
+    city.article && city.article.length > 0
+      ? city.article
+          .map(
+            (article) => `
+        <div class="mb-4">
+          <a
+            href="${article.link}"
+            target="_blank"
           >
-            Read More
+             <h3 class="text-darkgray text-xs font-neue">${article.title}</h3>
           </a>
-          <span class="no-underline">⟶</span>
+         
+          <div class="flex items-center gap-1">
+            <a
+              href="${article.link}"
+              target="_blank"
+              class="text-[#666] font-neue text-[10px] underline"
+            >
+              Read More
+            </a>
+            <span class="no-underline">⟶</span>
+          </div>
         </div>
-      </div>
-    `
-    )
-    .join("");
-    
-    popupContent.innerHTML = `
+      `
+          )
+          .join("")
+      : "";
+
+  // Event HTML (if any)
+  const eventHTML =
+    city.events && city.events.length > 0
+      ? city.events
+          .map(
+            (event) => `
+        <div class="mb-4">
+          <h3 class="text-darkGray text-xs font-neue">${event.eventName}</h3>
+          <p class="text-[#666] text-[10px] font-neue">${event.year}</p>
+        </div>
+      `
+          )
+          .join("")
+      : "";
+
+  // Combine Articles and Events
+  popupContent.innerHTML = `
     ${articleHTML}
-    <div class="flex items-center gap-2 mt-4">
+    ${eventHTML}
+    <div class="flex items-center gap-2 mt-10">
       <div class="w-2 h-2 rounded-full bg-[#ABC9A1]"></div>
       <h3 class="text-darkgray text-xs">${city.name}</h3>
     </div>
@@ -98,18 +126,18 @@ export default function Map() {
     )}</h4>
   `;
 
-    // Append marker and popup content to the shared container
-    container.appendChild(markerContent);
-    container.appendChild(popupContent);
+  // Append marker and popup content to the shared container
+  container.appendChild(markerContent);
+  container.appendChild(popupContent);
 
-    // Add hover effect dynamically for container
-    container.addEventListener("mouseenter", () => {
-      container.style.zIndex = "100"; // Bring this container to the front
-    });
+  // Add hover effect dynamically for container
+  container.addEventListener("mouseenter", () => {
+    container.style.zIndex = "100"; // Bring this container to the front
+  });
 
-    container.addEventListener("mouseleave", () => {
-      container.style.zIndex = "1"; // Reset stacking order
-    });
+  container.addEventListener("mouseleave", () => {
+    container.style.zIndex = "1"; // Reset stacking order
+  });
 
   // Add the container to the map
   new mapboxgl.Marker({
@@ -118,12 +146,7 @@ export default function Map() {
   })
     .setLngLat(city.coords)
     .addTo(map.current);
-  
-/*       new mapboxgl.Marker({ color: "#C98292" }) // Custom marker color
-        .setLngLat(city.coords)
-        .setPopup(popup) // Show popup on click
-        .addTo(map.current); */
-    });
+});
   
     return () => map.current.remove();
   }, []);

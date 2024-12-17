@@ -3,6 +3,7 @@ import Map from '@/components/ui/map';
 /* import { useEffect,  useState } from "react"; */
 import FallingBlocks from '@/components/ui/falling_block';
 import { StoriesList } from '@/components/ui/stories_list';
+import { EventsList } from '@/components/ui/events_list';
 
 export default function Stories() {
   return (
@@ -49,6 +50,7 @@ export default function Stories() {
             <Map />
           </div>
           <StoriesList/>
+          <EventsList/>
           {/* <div><Map/></div> */}
           <div className="px-[10%] w-full md:ml-[30%] min-h-[200px] text-left flex items-center">
             <h1 className="text-base md:text-lg">The World Above World: <br/> Entering an Uncommon Layer of Reality</h1>
