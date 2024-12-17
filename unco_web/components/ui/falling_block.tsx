@@ -20,7 +20,7 @@ const FallingBlocks: React.FC = () => {
         height: 600,
         wireframes: false,
         background: "#FFFFFF", 
-        showDebug: true, 
+        // showDebug: true, 
       },
     });
 
@@ -31,101 +31,101 @@ const FallingBlocks: React.FC = () => {
         Matter.Bodies.rectangle(400, 0, 800, 20, { // top
           isStatic: true,
           restitution: 1, 
-          render: { fillStyle: "#6C6C6C" },
+          render: { fillStyle: "white" },
           label: "Top",
         }),
         Matter.Bodies.rectangle(400, 600, 800, 20, { // bottom
           isStatic: true,
           restitution: 1,
-          render: { fillStyle: "#6C6C6C" },
+          render: { fillStyle: "white" },
           label: "Bottom",
         }),
         Matter.Bodies.rectangle(0, 300, 20, 600, { // left
           isStatic: true,
           restitution: 1,
-          render: { fillStyle: "#6C6C6C" },
+          render: { fillStyle: "white" },
           label: "Left",
         }),
         Matter.Bodies.rectangle(800, 300, 20, 600, { // right
           isStatic: true,
           restitution: 1,
-          render: { fillStyle: "#6C6C6C" },
+          render: { fillStyle: "white" },
           label: "Right",
         }),
     ];
 
     // SVG shapes
-    const svgPaths = [
-      '/pedals/books.svg',
-      '/pedals/cities.svg',
-      '/pedals/continents.svg',
-      '/pedals/donatedtoDeSci.svg',
-      '/pedals/followers.svg',
-      '/pedals/hours.svg',
-      '/pedals/members.svg',
-      '/pedals/months.svg',
-      '/pedals/projects_funded.svg',
-    ];
-
-
-    // Load SVG shapes dynamically
-    const loadSVG = async () => {
-      const shapes = [];
-
-      for (let i = 0; i < svgPaths.length; i++) {
-        const response = await fetch(svgPaths[i]);
-        const text = await response.text();
-        const path = new DOMParser().parseFromString(text, "image/svg+xml").querySelector("path");
-
-        if (path) {
-          const vertices = Matter.Svg.pathToVertices(path, 30); // Reduce vertices resolution
-          const body = Matter.Bodies.fromVertices(400 + i * 10, 50 + i * 10, [vertices], {
-            restitution: 0.6,
-            render: {
-              fillStyle: "#000000",
-              strokeStyle: "#000000",
-              lineWidth: 1,
-            },
-          });
-          shapes.push(body);
-        }
-      }
-      Matter.World.add(world, shapes);
-    };
-    Matter.World.add(world, boundaries);
-
-    // Load SVG shapes
-    loadSVG();
-
-    // create shapes
-    // const shapes = [
-    //     Matter.Bodies.rectangle(100, 50, 60, 60, {
-    //         restitution:0.8,
-    //         render: { fillStyle: "#FF5733", strokeStyle: "#000000", lineWidth: 2 },
-    //     }),
-    //     Matter.Bodies.circle(300, 50, 30, {
-    //         restitution:0.8,
-    //         render: { fillStyle: "#33FF57", strokeStyle: "#000000", lineWidth: 2 },
-    //     }),
-    //     Matter.Bodies.rectangle(400, 50, 50, 80, {
-    //         restitution:0.8,
-    //         render: { fillStyle: "#3357FF", strokeStyle: "#000000", lineWidth: 2 },
-    //     }),
-    //     Matter.Bodies.rectangle(200, 50, 60, 60, {
-    //         restitution:0.8,
-    //         render: { fillStyle: "#FF5733", strokeStyle: "#000000", lineWidth: 2 },
-    //       }),
-    //     Matter.Bodies.circle(300, 50, 30, {
-    //         restitution:0.8,
-    //         render: { fillStyle: "#33FF57", strokeStyle: "#000000", lineWidth: 2 },
-    //     }),
-    //     Matter.Bodies.rectangle(400, 50, 50, 80, {
-    //         restitution:0.8,
-    //         render: { fillStyle: "#3357FF", strokeStyle: "#000000", lineWidth: 2 },
-    //     }),
+    // const svgPaths = [
+    //   '/pedals/books.svg',
+    //   '/pedals/cities.svg',
+    //   '/pedals/continents.svg',
+    //   '/pedals/donatedtoDeSci.svg',
+    //   '/pedals/followers.svg',
+    //   '/pedals/hours.svg',
+    //   '/pedals/members.svg',
+    //   '/pedals/months.svg',
+    //   '/pedals/projects_funded.svg',
     // ];
 
-    // Matter.World.add(world, [...boundaries, ...shapes]);
+
+    // // Load SVG shapes dynamically
+    // const loadSVG = async () => {
+    //   const shapes = [];
+
+    //   for (let i = 0; i < svgPaths.length; i++) {
+    //     const response = await fetch(svgPaths[i]);
+    //     const text = await response.text();
+    //     const path = new DOMParser().parseFromString(text, "image/svg+xml").querySelector("path");
+
+    //     if (path) {
+    //       const vertices = Matter.Svg.pathToVertices(path, 30); // Reduce vertices resolution
+    //       const body = Matter.Bodies.fromVertices(400 + i * 10, 50 + i * 10, [vertices], {
+    //         restitution: 0.6,
+    //         render: {
+    //           fillStyle: "#000000",
+    //           strokeStyle: "#000000",
+    //           lineWidth: 1,
+    //         },
+    //       });
+    //       shapes.push(body);
+    //     }
+    //   }
+    //   Matter.World.add(world, shapes);
+    // };
+    // Matter.World.add(world, boundaries);
+
+    // // Load SVG shapes
+    // loadSVG();
+
+    // create shapes
+    const shapes = [
+        Matter.Bodies.rectangle(100, 50, 60, 60, {
+            restitution:0.8,
+            render: { fillStyle: "#EFDBE3" },
+        }),
+        Matter.Bodies.rectangle(400, 50, 50, 80, {
+            restitution:0.8,
+            render: { fillStyle: "#EFDFDE" },
+        }),
+        Matter.Bodies.rectangle(200, 50, 60, 60, {
+            restitution:0.8,
+            render: { fillStyle: "#F2ECED" },
+          }),
+        Matter.Bodies.rectangle(400, 50, 50, 80, {
+            restitution:0.8,
+            render: { fillStyle: "#F5EFEF" },
+        }),
+        Matter.Bodies.rectangle(400, 50, 50, 80, {
+          restitution:0.8,
+          render: { fillStyle: "#E9D0D9" },
+        }),
+        Matter.Bodies.rectangle(400, 50, 50, 80, {
+          restitution:0.8,
+          render: { fillStyle: "#EFDFDE" },
+        }),
+    ];
+
+    Matter.World.add(world, [...boundaries, ...shapes]);
 
     // drag feature
     const mouse = Matter.Mouse.create(render.canvas); 
