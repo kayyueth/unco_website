@@ -12,10 +12,10 @@ export const Navbar = () => {
   };
 
   return (
-    <nav className="absolute top-0 left-0 w-full bg-transparent">
+    <nav className="absolute top-0 left-0 w-full z-20 bg-transparent">
       <div className="flex items-center justify-between mx-auto px-[10%] py-10">
         {/* Logo */}
-        <a href="/" className="flex items-center space-x-2 z-30">
+        <a href="/" className="flex items-center space-x-2">
           <img src="/logo.svg" className="h-12" alt="Logo" />
         </a>
 
@@ -68,7 +68,7 @@ export const Navbar = () => {
         {/* Mobile Menu Button */}
         <button
           onClick={toggleMenu}
-          className="md:hidden z-30 text-darkGray text-base font-medium focus:outline-none"
+          className="md:hidden text-darkGray text-base font-medium focus:outline-none"
         >
           {isMenuOpen ? "Close" : "Menu"}
         </button>
@@ -76,7 +76,7 @@ export const Navbar = () => {
 
       {/* Mobile Dropdown */}
       {isMenuOpen && (
-        <div className="absolute top-0 left-0 w-full h-screen z-20 bg-white">
+        <div className="absolute top-0 left-0 w-full h-screen bg-white z-30">
           <Menu />
         </div>
       )}
