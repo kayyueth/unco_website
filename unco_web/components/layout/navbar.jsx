@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
+import Menu from "./menu";
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,10 +12,10 @@ export const Navbar = () => {
   };
 
   return (
-    <nav className="absolute top-0 left-0 w-full z-20 bg-transparent">
+    <nav className="absolute top-0 left-0 w-full bg-transparent">
       <div className="flex items-center justify-between mx-auto px-[10%] py-10">
         {/* Logo */}
-        <a href="/" className="flex items-center space-x-2">
+        <a href="/" className="flex items-center space-x-2 z-30">
           <img src="/logo.svg" className="h-12" alt="Logo" />
         </a>
 
@@ -67,59 +68,16 @@ export const Navbar = () => {
         {/* Mobile Menu Button */}
         <button
           onClick={toggleMenu}
-          className="md:hidden text-darkGray text-base font-medium focus:outline-none"
+          className="md:hidden z-30 text-darkGray text-base font-medium focus:outline-none"
         >
-          Menu
+          {isMenuOpen ? "Close" : "Menu"}
         </button>
       </div>
 
       {/* Mobile Dropdown */}
       {isMenuOpen && (
-        <div className="w-[90%] bg-white bg-opacity-80 rounded-lg shadow-md absolute top-full left-1/2 transform -translate-x-1/2 z-10 md:hidden">
-          <ul className="flex flex-col font-medium text-left py-3 px-5 divide-y divide-gray-500">
-            <li className="relative group">
-              <a
-                href="/stories"
-                className={`block py-4 px-4 rounded-l hover:text-[#C98292] hover:text- ${
-                  currentPath === "/stories" ? "text-[#C98392]" : "text-darkGray"
-                }`}
-              >
-                Stories
-              </a>
-              <div className="absolute inset-0 bg-transparent rounded-lg group-hover:opacity-50"></div>
-            </li>
-            <li className="relative group">
-              <a
-                href="/lab"
-                className={`block py-4 px-4 rounded-lg hover:bg-[#C98292] hover:text-white ${
-                  currentPath === "/lab" ? "text-[#C98392]" : "text-darkGray"
-                }`}
-              >
-                Lab
-              </a>
-              <div className="absolute inset-0 bg-transparent rounded-lg group-hover:bg-[#C98292] group-hover:opacity-50"></div>
-            </li>
-            <li className="relative group">
-              <a
-                href="/joinus"
-                className={`block py-4 px-4 rounded-lg hover:text-[#C98292] hover:text-white ${
-                  currentPath === "/joinus" ? "text-[#C98392]" : "text-darkGray"
-                }`}
-              >
-                Join us
-              </a>
-              <div className="absolute inset-0 bg-transparent rounded-lg group-hover:bg-[#C98292] group-hover:opacity-50"></div>
-            </li>
-            <li className="relative group">
-              <a
-                href="#"
-                className="block py-4 px-4 rounded-lg hover:bg-[#C98292] hover:text-white text-darkGray"
-              >
-                Connect Wallet
-              </a>
-              <div className="absolute inset-0 bg-transparent rounded-lg group-hover:bg-[#C98292] group-hover:opacity-50"></div>
-            </li>
-          </ul>
+        <div className="absolute top-0 left-0 w-full h-screen z-20 bg-white">
+          <Menu />
         </div>
       )}
     </nav>
