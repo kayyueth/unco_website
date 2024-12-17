@@ -36,7 +36,7 @@ export default function Stories() {
       <div className="w-full relative z-10 h-32 bg-gradient-to-t from-white via-white/70 to-transparent"></div>
         
       {/* Content Section */}
-      <div className="relative z-20 bg-white pt-44">
+      <div className="relative z-20 bg-white pt-44 pb-28">
         <div className="flex flex-col items-center w-full">
 {/*       <div className="w-[53%] min-h-[250px] text-left text-midGray text-5xl font-by57">
             
@@ -57,8 +57,12 @@ export default function Stories() {
           </div>
         </div>
 
-        <div className='flex justify-center z-100'>
+        {/* <div className='flex justify-center z-100'>
             <FallingBlocks />
+        </div> */}
+
+        <div className='flex justify-center mt-10'>
+          <img src='/pedals/sum.svg'/>
         </div>
 
       </div>
