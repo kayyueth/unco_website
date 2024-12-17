@@ -6,7 +6,9 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 import './map.css';
 
 // Mapbox Access Token
-mapboxgl.accessToken = 'pk.eyJ1Ijoid2F0ZXJsaWx5LWx5Y2hpLXpob3UiLCJhIjoiY200cGpqM3YxMHQwcTJxczVhbGZyNW02dCJ9.0hNaiHZ9pE-jF35w1hFDJQ';
+mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN || '';
+console.log(process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN);
+console.log(process.env.NEXT_PUBLIC_MAPBOX_STYLE_URL);
 
 export default function Map() {
   const mapContainer = useRef(null);
@@ -22,7 +24,7 @@ export default function Map() {
     // Initialize the Mapbox map
     map.current = new mapboxgl.Map({
       container: mapContainer.current,
-      style: "mapbox://styles/waterlily-lychi-zhou/cm4ps1mnz008h01r0cp4g1nku",
+      style: process.env.NEXT_PUBLIC_MAPBOX_STYLE_URL,
       center: [70, 35.8617],
       zoom: 1.5,
     });
