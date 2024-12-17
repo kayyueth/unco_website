@@ -19,7 +19,7 @@ export default function Map() {
     // Initialize the Mapbox map
     map.current = new mapboxgl.Map({
       container: mapContainer.current,
-      style: process.env.NEXT_PUBLIC_MAPBOX_STYLE_URL,
+      style: "process.env.NEXT_PUBLIC_MAPBOX_STYLE_URL",
       center: [70, 35.8617],
       zoom: 1.5,
     });

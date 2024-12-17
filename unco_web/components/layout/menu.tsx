@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 
 export default function Menu() {
     return (
@@ -7,11 +8,11 @@ export default function Menu() {
                 <p className="w-3/4 mt-[40%] pb-5">Uncommons is a researcher garden for decentralized thoughts and techno-social philosophies.</p>
             </div>
             <div className="mt-[20%] ml-12 grid space-y-2">
-                <a href="/home" className="text-2xl">About</a>
-                <a href="/stories" className="text-2xl">Stories</a>
-                <a href="/lab" className="text-2xl">Lab</a>
-                <a href="/joinus" className="text-2xl">Join Us</a>
-                <a href="" className="text-2xl">Connect Wallet</a>
+                <Link href="/" className="text-2xl">About</Link>
+                <Link href="/stories" className="text-2xl">Stories</Link>
+                <Link href="/lab" className="text-2xl">Lab</Link>
+                <Link href="/joinus" className="text-2xl">Join Us</Link>
+                <Link href="" className="text-2xl">Connect Wallet</Link>
             </div>
 
             <div className="mt-[20%] ml-12 grid space-y-2">
