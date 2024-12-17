@@ -99,33 +99,19 @@ const FallingBlocks: React.FC = () => {
 
     // create shapes
     const shapes = [
-        Matter.Bodies.rectangle(100, 50, 60, 60, {
-            restitution:0.8,
-            render: { fillStyle: "#EFDBE3" },
-        }),
-        Matter.Bodies.rectangle(400, 50, 50, 80, {
-            restitution:0.8,
-            render: { fillStyle: "#EFDFDE" },
-        }),
-        Matter.Bodies.rectangle(200, 50, 60, 60, {
-            restitution:0.8,
-            render: { fillStyle: "#F2ECED" },
-          }),
-        Matter.Bodies.rectangle(400, 50, 50, 80, {
-            restitution:0.8,
-            render: { fillStyle: "#F5EFEF" },
-        }),
-        Matter.Bodies.rectangle(400, 50, 50, 80, {
-          restitution:0.8,
-          render: { fillStyle: "#E9D0D9" },
-        }),
-        Matter.Bodies.rectangle(400, 50, 50, 80, {
-          restitution:0.8,
-          render: { fillStyle: "#EFDFDE" },
-        }),
+      { body: Matter.Bodies.rectangle(100, 100, 120, 120, { restitution: 0.8, render: { fillStyle: "#EFDBE3" } }), text: "4 continents" },
+      { body: Matter.Bodies.rectangle(150, 50, 120, 120, { restitution: 0.8, render: { fillStyle: "#EFDFDE" } }), text: "4 books" },
+      { body: Matter.Bodies.rectangle(180, 50, 240, 240, { restitution: 0.8, render: { fillStyle: "#F2ECED" } }), text: "600+ hours of online creation paid" },
+      { body: Matter.Bodies.rectangle(200, 50, 160, 160, { restitution: 0.8, render: { fillStyle: "#F5EFEF" } }), text: "15+ projects funded" },
+      { body: Matter.Bodies.rectangle(220, 50, 180, 180, { restitution: 0.8, render: { fillStyle: "#E9D0D9" } }), text: "$10,000 donated to DeSci" },
+      { body: Matter.Bodies.rectangle(240, 50, 140, 140, { restitution: 0.8, render: { fillStyle: "#EFDFDE" } }), text: "3000+ followers" },
+      { body: Matter.Bodies.rectangle(120, 50, 10, 10, { restitution: 0.8, render: { fillStyle: "#EFDFDE" } }), text: "🥺" },
+      { body: Matter.Bodies.rectangle(300, 50, 10, 10, { restitution: 0.8, render: { fillStyle: "#EFDFDE" } }), text: "🔥" },
+      { body: Matter.Bodies.rectangle(250, 50, 10, 10, { restitution: 0.8, render: { fillStyle: "#EFDFDE" } }), text: "🌸" },
+      { body: Matter.Bodies.rectangle(110, 50, 10, 10, { restitution: 0.8, render: { fillStyle: "#EFDFDE" } }), text: "🥑" },
+      { body: Matter.Bodies.rectangle(80, 50, 10, 10, { restitution: 0.8, render: { fillStyle: "#EFDFDE" } }), text: "🪴" },
     ];
-
-    Matter.World.add(world, [...boundaries, ...shapes]);
+    shapes.forEach((shape) => Matter.World.add(world, [...boundaries, shape.body]));
 
     // drag feature
     const mouse = Matter.Mouse.create(render.canvas); 
@@ -139,6 +125,21 @@ const FallingBlocks: React.FC = () => {
 
     Matter.World.add(world, mouseConstraint);
     render.mouse = mouse;
+
+    // 自定义渲染文本
+    Matter.Events.on(render, "afterRender", () => {
+      const context = render.context;
+      context.font = "14px Arial";
+      context.textAlign = "center";
+      context.textBaseline = "middle";
+
+      // 绘制每个物体的文本
+      shapes.forEach(({ body, text }) => {
+        const { position } = body;
+        context.fillStyle = "#000000"; // 文本颜色
+        context.fillText(text, position.x, position.y);
+      });
+    });
 
     Matter.Runner.run(runner, engine);
     Matter.Render.run(render);
@@ -158,7 +159,6 @@ const FallingBlocks: React.FC = () => {
     <div
       ref={sceneRef}
       style={{
-        border: "1px solid #000",
         width: "800px",
         height: "600px",
         margin: "0 auto",
