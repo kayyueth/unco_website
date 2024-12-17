@@ -3,7 +3,7 @@ import { useState } from "react";
 
 export default function Menu() {
     return (
-        <div className="px-[10%]">
+        <div className="px-[10%] md:hidden">
             <div className="border-b-2 ">
                 <p className="w-3/4 mt-[35%] pb-5">Uncommons is a researcher garden for decentralized thought and techno-social philosophies.</p>
             </div>
