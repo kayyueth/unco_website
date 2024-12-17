@@ -1,6 +1,7 @@
 "use client";
 import { MoveRight } from 'lucide-react';
 import { useEffect, useState } from "react";
+import Image from 'next/image';
 
 export default function Home() {
   const [scrollOpacity, setScrollOpacity] = useState(1);
@@ -25,20 +26,26 @@ export default function Home() {
           className="relative w-full h-full"
           style={{ opacity: scrollOpacity }}
         >
-          <img
+          <Image
             className="w-full h-full object-cover overflow-hidden"
             src="/home_bg.svg"
             alt="Background"
+            width={1512}
+            height={950}
           />
-          <img
+          <Image
             className="absolute inset-0 w-full h-full object-cover"
             src="/home_overlay.svg"
             alt="Overlay"
+            width={1512}
+            height={563}
           />
-          <img
+          <Image
             className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
             src="/home_ellipse.svg"
             alt="Overlay"
+            width={236}
+            height={509}
           />
         </div>
       </div>
@@ -76,9 +83,11 @@ export default function Home() {
             href="https://uncommons.notion.site/Onboarding-Guide-1512d6bf93b8800aa876fde907caa7ba?pvs=4"
             className="flex-shrink-0"
           >
-            <img
+            <Image
               src="/home_pic1.svg"
               alt="Getting Started"
+              width={116}
+              height={99}
               className="w-[90px] h-auto md:w-[80px] md:h-[80px] object-contain"
             />
           </a>
@@ -101,9 +110,11 @@ export default function Home() {
             href="https://blog.uncommons.cc/"
             className="flex-shrink-0"
           >
-            <img
+            <Image
               src="/home_pic2.svg"
               alt="Newsletter"
+              width={100}
+              height={90}
               className="w-[90px] h-auto md:w-[80px] md:h-[80px] object-contain"
             />
           </a>
@@ -115,7 +126,7 @@ export default function Home() {
               <h3 className="text-lg font-semibold mb-2">Newsletter</h3>
             </a>
             <p className="text-sm leading-relaxed text-gray-600">
-              Digital digest curated by our community. Subscribe to Uncommons' newsletter to read
+              Digital digest curated by our community. Subscribe to Uncommons&apos; newsletter to read
               original stories, or contribute your own.
             </p>
           </div>
@@ -127,9 +138,11 @@ export default function Home() {
             href="https://calendar.google.com/calendar/embed?src=bdd312e1a2003f5bbac8fdf3748450c9ea093a58a2cd35f186d958c87df3c25e%40group.calendar.google.com&ctz=Asia%2FSingapore"
             className="flex-shrink-0"
           >
-            <img
+            <Image
               src="/home_pic3.svg"
               alt="Town Hall"
+              width={100}
+              height={86}
               className="w-[90px] h-auto md:w-[80px] md:h-[80px] object-contain"
             />
           </a>

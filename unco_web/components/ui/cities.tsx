@@ -1,4 +1,11 @@
-export const cities = [
+export type City = {
+  name: string;
+  coords: [number, number];
+  article?: { title: string; link: string }[];
+  events?: { eventName: string; year: string }[];
+};
+
+export const cities: City[] = [
   {
     name: "HEALDSBURG",
     coords: [-122.8701, 38.6082],
@@ -6,9 +13,6 @@ export const cities = [
       { title: "Story from Edge Esmeralda", link: "https://blog.uncommons.cc/edge-esmeralda-story/" },
       { title: "Story from Pop-up City Community", link: "https://blog.uncommons.cc/cryptoflight-vol-3/" },
       { title: "Interview with Janine Leger", link: "https://blog.uncommons.cc/cryptoflight-vol-1/" },
-    ],
-    event: [
-      {eventName:""}
     ],
   },
   {

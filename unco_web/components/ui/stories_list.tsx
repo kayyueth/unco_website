@@ -8,7 +8,7 @@ export const StoriesList = () => {
         {cities
           .filter((city) => city.article && city.article.length > 0) // Only include cities with articles
           .map((city) =>
-            city.article.map((article, index) => (
+            city.article!.map((article, index) => (
               <div
                 key={`${city.name}-${index}`}
                 className="grid grid-cols-[1fr_3fr_auto] gap-2 py-3 items-center"

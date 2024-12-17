@@ -1,5 +1,6 @@
 'use client';
 import { useState } from "react";
+import Image from 'next/image';
 
 const Lab = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,9 +32,9 @@ const Lab = () => {
           <div className="w-full lg:max-w-[45%]">
             <h1 className="font-semibold text-lg mb-2">Raw School</h1>
             <p className="text-black mt-3">
-              Uncommons' crypto study room, focusing on open-style liberal arts
+              Uncommons&apos; crypto study room, focusing on open-style liberal arts
               education. Driven by peer-to-peer discussions and mentorship, aiming to
-              enhance community members' understanding of crypto humanities.
+              enhance community members&apos; understanding of crypto humanities.
             </p>
           </div>
           <div className="w-full lg:max-w-[45%]">
@@ -48,7 +49,7 @@ const Lab = () => {
           <div className="w-full lg:max-w-[45%]">
             <h1 className="font-semibold text-lg mb-2 text-brown">Decentralized Science</h1>
             <p className="mt-3">
-              Uncommons' (formerly GreenPill CN community) lecture series,
+              Uncommons&apos; (formerly GreenPill CN community) lecture series,
               discussions, and articles on decentralized science. Additionally,
               Uncommons has donated $10,000 to the DeSci ecosystem.
             </p>
@@ -59,9 +60,11 @@ const Lab = () => {
             <div className="md:hidden w-full border-t border-gray-300 my-4"></div>
             <div className="flex justify-between ml-2 md:ml-0 mr-2">
               <h1 className="md:font-semibold text-lg mb-1 mt-1">More</h1>
-              <img
+              <Image
                 src="/plus_icon.svg"
                 alt="Toggle Content"
+                width={17}
+                height={17}
                 className="cursor-pointer w-4 h-4 mt-2 md:hidden"
                 onClick={toggleContent}
               />
@@ -86,25 +89,33 @@ const Lab = () => {
         <h1 className="font-by57 text-2xl text-[#8AAFAF]">02 LAB PUBLICATIONS</h1>
         <div className="flex flex-col min-h-[200px] gap-10 items-start">
           <div className="flex gap-4 justify-start md:justify-start overflow-x-auto whitespace-nowrap">
-            <img
+            <Image
               src="/lab_book1.svg"
               className="inline-block md:max-h-[200px] object-contain"
               alt="book1"
+              width={156}
+              height={196}
             />
-            <img
+            <Image
               src="/lab_book2.svg"
               className="inline-block md:max-h-[200px] object-contain"
               alt="book2"
+              width={155}
+              height={198}
             />
-            <img
+            <Image
               src="/lab_book3.svg"
               className="inline-block md:max-h-[200px] object-contain"
               alt="book3"
+              width={160}
+              height={198}
             />
-            <img
+            <Image
               src="/lab_book4.svg"
               className="inline-block max-h-[200px] object-contain"
               alt="book4"
+              width={131}
+              height={200}
             />
           </div>
           <p className="text-xs text-left">Click to view books published by Uncommons</p>

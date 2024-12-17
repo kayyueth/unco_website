@@ -1,4 +1,5 @@
 import { MoveRight } from 'lucide-react';
+import Image from 'next/image';
 
 export default function JoinUs() {
     return (
@@ -7,7 +8,12 @@ export default function JoinUs() {
           <h1 className='text-left text-midGray text-3xl md:text-5xl font-by57 z-10'>RESEARCH SCOPE</h1>
         </div>
         <div className="flex px-[10%] md:px-[25%] mt-20 mb-20 items-center">
-          <img src='/joinus_dandelion.svg'/>
+        <Image 
+          src="/joinus_dandelion.svg" 
+          alt="Dandelion" 
+          width={1908}
+          height={1913}
+        />
         </div>
 
         <div className="flex flex-col w-full px-[10%] md:px-[25%]">

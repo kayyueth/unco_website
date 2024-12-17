@@ -8,7 +8,7 @@ export const EventsList = () => {
         {cities
           .filter((city) => city.events && city.events.length > 0) // Only include cities with events
           .map((city) =>
-            city.events.map((event, index) => (
+            city.events!.map((event, index) => (
               <div
                 key={`${city.name}-${event.eventName}-${index}`}
                 className="grid grid-cols-[1fr_3fr_auto] gap-4 py-3 items-center"

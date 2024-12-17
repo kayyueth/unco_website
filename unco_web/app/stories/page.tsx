@@ -1,7 +1,8 @@
 "use client";
 import Map from '@/components/ui/map';
+import Image from 'next/image';
 /* import { useEffect,  useState } from "react"; */
-import FallingBlocks from '@/components/ui/falling_block';
+/* import FallingBlocks from '@/components/ui/falling_block'; */
 import { StoriesList } from '@/components/ui/stories_list';
 import { EventsList } from '@/components/ui/events_list';
 
@@ -15,15 +16,19 @@ export default function Stories() {
           className="relative w-full h-full"
           style={{ opacity: scrollOpacity }}
         > */}
-          <img
+          <Image
             className="w-full h-full object-cover"
             src="/stories_bg.svg"
             alt="Background"
+            width={1512}
+            height={957}
           />
-          <img
+          <Image
             className="absolute inset-0 w-full h-full object-cover"
             src="/stories_overlay.svg"
             alt="Overlay"
+            width={1512}
+            height={957}
           />
         </div>
 
@@ -43,7 +48,7 @@ export default function Stories() {
           </div> */}
           <div className="px-[10%] w-full min-h-[250px] text-left md:ml-[75%] flex flex-col gap-3">
             
-            <h1 className="text-brown text-base md:text-lg">What's happening in the decentralized <br/> mini-societies in the global world?</h1>
+            <h1 className="text-brown text-base md:text-lg">What&apos;s happening in the decentralized <br/> mini-societies in the global world?</h1>
             <p className="text-lightGray text-sm">Click to view the stories <br/> from Uncommons community members.</p>
           </div>
           <div className="w-full mt-6 mb-10 md:mb-44">
@@ -62,7 +67,12 @@ export default function Stories() {
         </div> */}
 
         <div className='flex justify-center mt-10 px-[10%]'>
-          <img src='/pedals/sum.svg'/>
+          <Image 
+            src='/pedals/sum.svg'
+            alt='pedals'
+            width={742}
+            height={410}
+          />
         </div>
 
       </div>
